@@ -1,17 +1,29 @@
 * {
     box-sizing: border-box;
 }
+
+body {
+    margin: 0;
+}
+
 .hide {
     display: none !important;
 }
 
+.container {
+    max-width: 100%;
+    padding-top: 44px;
+    height: 844px;
+    overflow-y: hidden;
+}
+
 main {
     margin: 0 auto;
-    padding-top: 44px;
     display: flex;
     flex: 1;
     flex-direction: column;
     max-width: 390px;
+    height: 844px;
     
     gap: 10px;
 }
