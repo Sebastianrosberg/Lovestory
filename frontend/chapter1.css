@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "InstrumentSerif";
+    src: url(fonts/InstrumentSerif-Regular.ttf);
+}
+
+#chapter1 h1 {
+    font-size: 24px;
+    font-family: InstrumentSerif;
+    margin: 0;
+}
+
+#chapter1 p {
+    padding-left: 8px;
+    margin: 0;
+    font-family: InstrumentSerif;
+    font-style: italic;
+}
