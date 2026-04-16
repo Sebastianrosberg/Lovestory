@@ -5,12 +5,14 @@
     display: none !important;
 }
 
-main {
+#container {
     margin: 0 auto;
+    padding-top: 44px;
     display: flex;
     flex: 1;
     flex-direction: column;
-    max-width: 400px;
+    max-width: 390px;
+    
     gap: 10px;
 }
 
