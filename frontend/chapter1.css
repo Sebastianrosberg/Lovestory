@@ -3,6 +3,10 @@
     src: url(../fonts/InstrumentSerif-Regular.ttf);
 }
 
+#chapter1 {
+    padding: 20px;
+}
+
 #chapter1 h1 {
     font-size: 24px;
     font-family: InstrumentSerif;
@@ -14,4 +18,17 @@
     margin: 0;
     font-family: InstrumentSerif;
     font-style: italic;
+}
+
+#shePicFrame {
+    height: 122px;
+    width: 183px;
+    transform: rotate(12deg);
+    margin-top: 20px;
+    margin-right: 0;
+}
+
+#shePicFrame img {
+    height: 100%;
+    width: 100%;
 }
