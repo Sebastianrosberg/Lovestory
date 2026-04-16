@@ -2,4 +2,23 @@
     background-image: url("../images/Cover_Page_Edit.jpg");
     background-position: center;
     background-size: cover;
+    position: relative;
+
+    display: flex;
+}
+
+#startButton {
+    width: 10px;
+    height: 16px;
+    border-radius: 0;
+    background-color: whitesmoke;
+    border: 0px;
+
+    position: absolute;
+    top: 480px;
+    left: 85px;
+
+    transform: rotate(-10deg);
+    border-radius: 2px;
+
 }
