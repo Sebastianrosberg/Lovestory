@@ -13,14 +13,11 @@ function handler() {
 		return new Response(null, { headers: headerCORS })
 	}
 
-
-
     return serveDir(request, {
 		fsRoot: "/",
 		urlRoot: "",
 		showDirListing: false
 	});
-
 
 }
 
