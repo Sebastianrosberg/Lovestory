@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 10px;
+}
+
+.chapter {
+    display: flex;
+    align-items: center;
+    max-height: 10%;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
