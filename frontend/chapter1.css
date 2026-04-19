@@ -3,32 +3,68 @@
     src: url(../fonts/InstrumentSerif-Regular.ttf);
 }
 
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url(../fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
 #chapter1 {
     padding: 20px;
+    border: 1px solid black;
 }
 
 #chapter1 h1 {
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: 100;
     font-family: InstrumentSerif;
     margin: 0;
 }
 
-#chapter1 p {
+#chapterOf {
     padding-left: 8px;
     margin: 0;
+    font-size: 16px;
+    font-weight: 100;
     font-family: InstrumentSerif;
     font-style: italic;
 }
 
-#shePicFrame {
+#chapter1 p {
+    font-size: 16px;
+    font-family: SpaceGrotesk;
+    width: 75%;
+}
+
+#firstPicFrame {
     height: 122px;
     width: 183px;
     transform: rotate(12deg);
-    margin-top: 20px;
-    margin-right: 0;
+    margin-top: 40px;
+    margin-left: auto;
 }
 
-#shePicFrame img {
+#firstPicFrame img {
     height: 100%;
     width: 100%;
+}
+
+#secondPicFrame {
+    height: 122px;
+    width: 183px;
+    transform: rotate(-12deg);
+    margin-top: 40px;
+}
+
+#secondPicFrame img {
+    height: 100%;
+    width: 100%;
+}
+
+#secondBodyText {
+    margin-left: auto;
+}
+
+#chapter1Next {
+    width: 50px;
+    height: 24px;
 }
