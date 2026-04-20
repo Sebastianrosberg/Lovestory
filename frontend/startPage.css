@@ -7,7 +7,8 @@
     display: flex;
 }
 
-#startButton {
+#phoneButton {
+    display: flex;
     width: 10px;
     height: 16px;
     border-radius: 0;
@@ -20,5 +21,20 @@
 
     transform: rotate(-10deg);
     border-radius: 2px;
+}
 
+#humanButton {
+    height: 200px;
+    width: 45px;
+    position: absolute;
+    top: 475px;
+    left: 103px;
+
+    border-radius: 30px;
+    transform: rotate(-3deg);
+    opacity: 0;
+}
+
+#humanButton:hover {
+    cursor: pointer;
 }

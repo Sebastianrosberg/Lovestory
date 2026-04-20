@@ -10,6 +10,10 @@ body {
     display: none !important;
 }
 
+.reveal {
+    display: flex !important;
+}
+
 .container {
     max-width: 100%;
     padding-top: 44px;
