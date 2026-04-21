@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="startPage.css">
+    <link rel="stylesheet" href="messagePage.css">
     <link rel="stylesheet" href="chapter1.css">
     <link rel="stylesheet" href="chapter2.css">
     <link rel="stylesheet" href="chapter3.css">
@@ -13,22 +15,33 @@
     <link rel="stylesheet" href="chapter5.css">
     <link rel="stylesheet" href="chapter6.css">
 </head>
+
 <body>
     <main>
-        <div class="container" id="startPage">
+        <div class="container hide" id="startPage">
             <button id="humanButton"></button>
             <button id="phoneButton"></button>
             <img id="smsBubble" src="../images/giphy.gif" alt="">
         </div>
 
         <div class="container hide" id="menuPage">
-            <div class="chapter" id="chapter1">Kapitel 1</div> 
-            <div class="chapter" id="chapter2">Kapitel 2</div> 
-            <div class="chapter" id="chapter3">Kapitel 3</div> 
-            <div class="chapter" id="chapter4">Kapitel 4</div> 
-            <div class="chapter" id="chapter5">Kapitel 5</div> 
+            <div class="chapter" id="chapter1">Kapitel 1</div>
+            <div class="chapter" id="chapter2">Kapitel 2</div>
+            <div class="chapter" id="chapter3">Kapitel 3</div>
+            <div class="chapter" id="chapter4">Kapitel 4</div>
+            <div class="chapter" id="chapter5">Kapitel 5</div>
             <div class="chapter" id="chapter6">Kapitel 6</div>
-        </div> 
+        </div>
+
+        <div id="messagePage" class="container">
+            <img src="/images/set-up-icloud-concept-icon-sign-in.png" alt="">
+            <div>
+                <p>Hej Love, jag har tänkt mycket på dig och ditt brev. Samtidigt som varje del av mig längtar efter dig
+                    och vill vara med dig så kan jag inte. Jag tänker ofta tillbaka till vår första dejt, hur vi kunde
+                    prata om allt tillsammans medan vi gick där i slottsparken, jag saknar det. Vi kommer aldrig kunna
+                    återgå till det, inte efter det du gjort.</p>
+            </div>
+        </div>
 
         <div class="container hide" id="chapter1">
             <h4 id="chapterOf">1 av 6</h4>
@@ -65,4 +78,5 @@
     <script src="index.js"></script>
     <script src="../backend/server.js"></script>
 </body>
+
 </html>
