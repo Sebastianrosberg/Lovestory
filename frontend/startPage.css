@@ -35,6 +35,12 @@
     opacity: 0;
 }
 
-.cursorHover:hover {
-    cursor: pointer;
+#smsBubble {
+    height: 10%;
+    width: 15%;
+    position: absolute;
+    top: 405px;
+    left: 90px;
+
+    display: none;
 }

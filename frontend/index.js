@@ -10,6 +10,7 @@ let allPages = [startPage, chapter1Page, chapter2Page, chapter3Page, chapter4Pag
 
 let humanButton = document.querySelector("#humanButton");
 let phoneButton = document.querySelector("#phoneButton");
+let smsBubble = document.querySelector("#smsBubble")
 
 // Start Page Listeneres
 
@@ -18,11 +19,17 @@ humanButton.addEventListener("click", () => {
     startPage.style.backgroundImage = "url('../images/Cover_Page_with_phone.jpg')"
     phoneButton.style.display = "flex"
     humanButton.style.display = "none"
+    smsBubble.style.display = "flex"
 
     setTimeout( () => {
         startPage.style.backgroundImage = "url('../images/Cover_Page_Edit.jpg')"
         phoneButton.style.display = "none"
         humanButton.style.display = "flex"
-    }, 2000)
+        smsBubble.style.display = "none"
+    }, 20000)
 
+})
+
+smsBubble.addEventListener("click", () => {
+    
 })
