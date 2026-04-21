@@ -17,10 +17,10 @@
 
     position: absolute;
     top: 480px;
-    left: 85px;
+    left: 95px;
 
-    transform: rotate(-10deg);
     border-radius: 2px;
+    opacity: 0;
 }
 
 #humanButton {
@@ -35,6 +35,6 @@
     opacity: 0;
 }
 
-#humanButton:hover {
+.cursorHover:hover {
     cursor: pointer;
 }
