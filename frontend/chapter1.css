@@ -11,6 +11,7 @@
 #chapter1 {
     padding: 20px;
     border: 1px solid black;
+    background-image: url(../images/crumbledPaper.jpg);
 }
 
 #chapter1 h1 {
@@ -36,7 +37,6 @@
 }
 
 #firstPicFrame {
-    height: 122px;
     width: 183px;
     transform: rotate(12deg);
     margin-top: 40px;
