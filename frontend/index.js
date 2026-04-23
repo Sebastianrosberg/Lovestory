@@ -1,4 +1,6 @@
+import * as functions from "../frontend/function";
 let startPage = document.querySelector("#startPage");
+let messagePage = document.querySelector("#messagePage")
 let chapter1Page = document.querySelector("#chapter1");
 let chapter2Page = document.querySelector("#chapter2");
 let chapter3Page = document.querySelector("#chapter3");
@@ -6,7 +8,7 @@ let chapter4Page = document.querySelector("#chapter4");
 let chapter5Page = document.querySelector("#chapter5");
 let chapter6Page = document.querySelector("#chapter6");
 
-let allPages = [startPage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page];
+let allPages = [startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page];
 
 let humanButton = document.querySelector("#humanButton");
 let phoneButton = document.querySelector("#phoneButton");
@@ -32,4 +34,12 @@ humanButton.addEventListener("click", () => {
 
 smsBubble.addEventListener("click", () => {
     
+})
+
+// Diven som visar din page (Vi tar bort när vi är klara)
+
+let showMyPageInput = document.querySelector("#myChosenPage")
+document.querySelector("#showMyPageButton").addEventListener("click", () => {
+    switchPage(showMyPageInput.value)
+    showMyPageInput.value = ""
 })
