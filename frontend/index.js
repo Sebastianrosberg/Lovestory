@@ -1,4 +1,4 @@
-import * as functions from "../frontend/function";
+
 let startPage = document.querySelector("#startPage");
 let messagePage = document.querySelector("#messagePage")
 let chapter1Page = document.querySelector("#chapter1");
