@@ -58,14 +58,3 @@ main {
    padding: 20px;
 }
 
-#showMyPageButton {
-    width: 25%;
-}
-
-#buttonContainerForShow {
-    display: flex;
-}
-
-#myChosenPage {
-    width: 75%;
-}

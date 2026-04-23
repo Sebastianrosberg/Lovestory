@@ -39,7 +39,10 @@ smsBubble.addEventListener("click", () => {
 // Diven som visar din page (Vi tar bort när vi är klara)
 
 let showMyPageInput = document.querySelector("#myChosenPage")
-document.querySelector("#showMyPageButton").addEventListener("click", () => {
-    switchPage(showMyPageInput.value)
-    showMyPageInput.value = ""
+showMyPageInput.addEventListener("keydown", (event) => {
+    if(event.key == "Enter") {
+        switchPage(showMyPageInput.value)
+        showMyPageInput.value = ""
+    }
+    
 })
