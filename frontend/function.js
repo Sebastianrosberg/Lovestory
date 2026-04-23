@@ -8,3 +8,4 @@ function switchPage(page) {
     myPage.classList.add("reveal")
 }
 
+
