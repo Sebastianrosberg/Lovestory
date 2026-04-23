@@ -33,17 +33,6 @@
     position: relative;
 }
 
-#messageBubble::after {
-    content: "";
-    position: absolute;
-    right: -6px;
-    bottom: 0;
-    width: 12px;
-    height: 12px;
-    background: #e5e5ea;
-    border-bottom-left-radius: 10px;
-}
-
 #messageBubble2 {
     background-color: rgb(80, 80, 213);
     padding: 10px 14px;
