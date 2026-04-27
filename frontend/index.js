@@ -50,8 +50,14 @@ showMyPageInput.addEventListener("keydown", (event) => {
 
 //geoLocation
 
-let radius = 25;
-let targetLocation = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
+let radius = 30;
+let chapter1Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
+let chapter2Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
+let chapter3Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
+let chapter4Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
+let chapter5Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
+let chapter6Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
+
 
 navigator.geolocation.watchPosition((position) => {
     let userCordLatitude = position.coords.latitude;
@@ -64,6 +70,8 @@ navigator.geolocation.watchPosition((position) => {
 })
 
 function getDistanceM(lat1, lng1, lat2, lng2) {
+    console.log("FunctionCall getdistance");
+    
     const metersPerDeg = 111139;
     const dx = (lng2 - lng1) * metersPerDeg * Math.cos(lat1 * Math.PI / 180);
     const dy = (lat2 - lat1) * metersPerDeg;
