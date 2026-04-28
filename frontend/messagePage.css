@@ -33,7 +33,9 @@
     position: relative;
 }
 
-#messageBubble2 {
+#messageBubble2 {}
+
+#messageBubble2 button {
     background-color: rgb(80, 80, 213);
     padding: 10px 14px;
     border-radius: 50px;
@@ -41,4 +43,10 @@
     line-height: 1.4;
     margin-top: 50px;
     margin-left: 185px;
+    border: 0px;
+}
+
+#messageBubble2 button:hover {
+    background-color: rgba(80, 80, 213, 0.328);
+    cursor: pointer;
 }
