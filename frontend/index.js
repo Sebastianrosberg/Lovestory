@@ -8,34 +8,31 @@ let chapter4Page = document.querySelector("#chapter4");
 let chapter5Page = document.querySelector("#chapter5");
 let chapter6Page = document.querySelector("#chapter6");
 let geoLocCircle = document.querySelector("#geoLocationCircle");
+let smsSignal = document.querySelector("#smsSignal")
 
 let allPages = [startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page];
 
 let humanButton = document.querySelector("#humanButton");
-let phoneButton = document.querySelector("#phoneButton");
-let smsBubble = document.querySelector("#smsBubble")
+let circle1 = document.querySelector("#circle1");
+let circle2 = document.querySelector("#circle2");
+let circle3 = document.querySelector("#circle3");
+
 
 // Start Page Listeneres
 
 humanButton.addEventListener("click", () => {
 
     startPage.style.backgroundImage = "url('../images/Cover_Page_with_phone.jpg')"
-    phoneButton.style.display = "flex"
     humanButton.style.display = "none"
-    smsBubble.style.display = "flex"
+    smsSignal.play()
 
     setTimeout(() => {
         startPage.style.backgroundImage = "url('../images/Cover_Page_Edit.jpg')"
-        phoneButton.style.display = "none"
         humanButton.style.display = "flex"
-        smsBubble.style.display = "none"
-    }, 20000)
+    }, 10000);
 
 })
 
-smsBubble.addEventListener("click", () => {
-
-})
 
 // Diven som visar din page (Vi tar bort när vi är klara)
 
