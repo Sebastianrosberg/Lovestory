@@ -33,8 +33,6 @@
     position: relative;
 }
 
-#messageBubble2 {}
-
 #messageBubble2 button {
     background-color: rgb(80, 80, 213);
     padding: 10px 14px;
