@@ -2,6 +2,16 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "InstrumentSerif";
+    src: url(../fonts/InstrumentSerif-Regular.ttf);
+}
+
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url(../fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
 body {
     margin: 0;
 }
@@ -42,6 +52,25 @@ main {
     padding: 20px;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.currentChapter {
+    font-size: 16px;
+    font-weight: 100;
+    font-family: InstrumentSerif;
+    font-style: italic;
+}
+
+.chapterTitle {
+    font-size: 32px;
+    font-weight: 100;
+    font-family: InstrumentSerif;
+    margin: 0;
+}
+
+.breadText {
+    font-size: 16px;
+    font-family: SpaceGrotesk;
 }
 
 #revealMyPage {

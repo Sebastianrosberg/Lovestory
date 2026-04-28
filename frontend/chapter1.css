@@ -1,38 +1,15 @@
-@font-face {
-    font-family: "InstrumentSerif";
-    src: url(../fonts/InstrumentSerif-Regular.ttf);
-}
-
-@font-face {
-    font-family: "SpaceGrotesk";
-    src: url(../fonts/SpaceGrotesk-VariableFont_wght.ttf);
-}
-
 #chapter1 {
     padding: 20px;
     border: 1px solid black;
     background-image: url(../images/crumbledPaper.jpg);
 }
 
-#chapter1 h1 {
-    font-size: 32px;
-    font-weight: 100;
-    font-family: InstrumentSerif;
-    margin: 0;
-}
-
 #chapterOf {
     padding-left: 8px;
     margin: 0;
-    font-size: 16px;
-    font-weight: 100;
-    font-family: InstrumentSerif;
-    font-style: italic;
 }
 
 #chapter1 p {
-    font-size: 16px;
-    font-family: SpaceGrotesk;
     width: 75%;
 }
 
@@ -67,4 +44,7 @@
 #chapter1Next {
     width: 50px;
     height: 24px;
+    display: block;
+    margin-left: auto;
+    margin-top: 20px;
 }
