@@ -27,9 +27,19 @@
 
     <main>
         <div class="container hide" id="startPage">
-            <button id="humanButton"></button>
-            <button id="phoneButton"></button>
-            <img id="smsBubble" src="../images/giphy.gif" alt="">
+            <div id="startPageSmsConversation">
+                <div id="loadingSms">
+                    <div class="smsCircle" id="circle1"></div>
+                    <div class="smsCircle" id="circle2"></div>
+                    <div class="smsCircle" id="circle3"></div>
+                </div>
+                <div id="message2"></div>
+            </div>
+
+            <div id="humanButtonContainer">
+                <button id="humanButton"></button>
+            </div>
+            <audio id="smsSignal" src="../audiofiles/soundreality-sms-185447.mp3"></audio>
         </div>
 
         <div id="messagePage" class="container hide">
