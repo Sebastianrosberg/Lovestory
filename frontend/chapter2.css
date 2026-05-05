@@ -2,3 +2,11 @@
     background-image: url(../images/image.png);
     background-size: cover;
 }
+
+#chap2FirstImg {
+    width: 2px;
+}
+
+#chapter2 img {
+    width: 50%;
+}
