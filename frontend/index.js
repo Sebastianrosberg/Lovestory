@@ -75,3 +75,44 @@ function getDistanceM(lat1, lng1, lat2, lng2) {
     return Math.sqrt(dx * dx + dy * dy);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Gå fram eller bak mellan sidorna
+
+
+document.querySelector(".backButton").addEventListener("click", () => {
+    currentPage = goBackAPage(currentPage);
+})
+
+document.querySelector(".nextButton").addEventListener("click", () => {
+    currentPage = goForthAPage(currentPage);
+})
