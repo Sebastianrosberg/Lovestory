@@ -28,6 +28,9 @@ body {
     max-width: 100%;
     padding-top: 44px;
     overflow-y: hidden;
+    padding: 20px;
+    border: 1px solid black;
+    background-image: url(../images/image.png);
 }
 
 main {
@@ -69,6 +72,11 @@ main {
 .breadText {
     font-size: 16px;
     font-family: SpaceGrotesk;
+}
+
+.navigationButtons {
+    display: flex;
+    justify-content: space-between;
 }
 
 #revealMyPage {
