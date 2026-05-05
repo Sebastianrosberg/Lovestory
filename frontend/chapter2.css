@@ -10,3 +10,30 @@
 #chapter2 img {
     width: 50%;
 }
+
+#letterPicture {
+    cursor: pointer;
+}
+
+#overlay {
+    display: none;
+}
+
+#overlay1 {
+    display: none;
+}
+
+#letter {
+    background-color: white;
+}
+
+#letterTitleAndText {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+span {
+    font-weight: bold;
+    font-size: large;
+}

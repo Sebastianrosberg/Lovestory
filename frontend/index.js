@@ -68,10 +68,38 @@ navigator.geolocation.watchPosition((position) => {
 
 function getDistanceM(lat1, lng1, lat2, lng2) {
     console.log("FunctionCall getdistance");
-    
+
     const metersPerDeg = 111139;
     const dx = (lng2 - lng1) * metersPerDeg * Math.cos(lat1 * Math.PI / 180);
     const dy = (lat2 - lat1) * metersPerDeg;
     return Math.sqrt(dx * dx + dy * dy);
 }
+
+//chapter 2
+let letterImage = document.getElementById("letterPicture");
+let closeLetter = document.getElementById("closeLetter");
+
+letterImage.addEventListener("click", function () {
+    chapter2Page.style.display = "none"
+    document.getElementById("overlay").style.display = "block";
+})
+
+closeLetter.addEventListener("click", function () {
+    chapter2Page.style.display = "block"
+    document.getElementById("overlay").style.display = "none"
+})
+
+let letterImage1 = document.getElementById("letterPicture1");
+let closeletter1 = document.getElementById("closeLetter1");
+let overlay1 = document.getElementById("overlay1");
+
+letterImage1.addEventListener("click", function () {
+    chapter2Page.style.display = "none"
+    overlay1.style.display = "block"
+})
+
+closeletter1.addEventListener("click", function () {
+    chapter2Page.style.display = "block"
+    overlay1.style.display = "none"
+})
 
