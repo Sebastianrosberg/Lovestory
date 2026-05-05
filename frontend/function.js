@@ -7,21 +7,24 @@ function switchPage(page) {
     myPage.classList.add("reveal")
 }
 
-let currentPage = 0;
+let currentPage = 1;
 
 function showPage(index) {
-    allPages.forEach(page => page.classList.remove = "hide");
-    allPages[index].classList.add = "reveal";
+    allPages.forEach(page => page.classList.remove = "reveal");
+    allPages[index].classList.add = "hide";
+
+    allPages[index].classList.remove("hide");
+    allPages[index].classList.add("reveal");
 }
 
-function goBackAPage(currentPage) {
+function goBackAPage() {
     if (currentPage > 0) {
         currentPage--;
         showPage(currentPage);
     }
 }
 
-function goForthAPage(currentPage) {
+function goForthAPage() {
     if (currentPage < allPages.length - 1) {
         currentPage++;
         showPage(currentPage);

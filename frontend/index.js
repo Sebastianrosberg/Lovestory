@@ -109,10 +109,14 @@ function getDistanceM(lat1, lng1, lat2, lng2) {
 // Gå fram eller bak mellan sidorna
 
 
-document.querySelector(".backButton").addEventListener("click", () => {
-    currentPage = goBackAPage(currentPage);
+document.querySelectorAll(".backButton").forEach(btn => {
+    btn.addEventListener("click", () => {
+        goBackAPage();
+    })
 })
 
-document.querySelector(".nextButton").addEventListener("click", () => {
-    currentPage = goForthAPage(currentPage);
+document.querySelectorAll(".nextButton").forEach(btn => {
+    btn.addEventListener("click", () => {
+        goForthAPage();
+    })
 })
