@@ -16,7 +16,8 @@ let humanButton = document.querySelector("#humanButton");
 let circle1 = document.querySelector("#circle1");
 let circle2 = document.querySelector("#circle2");
 let circle3 = document.querySelector("#circle3");
-
+let loadingSms = document.querySelector("#loadingSms")
+let startPageSmsConversation = document.querySelector("#startPageSmsConversation")
 
 // Start Page Listeneres
 
@@ -24,13 +25,40 @@ humanButton.addEventListener("click", () => {
 
     startPage.style.backgroundImage = "url('../images/Cover_Page_with_phone.jpg')"
     humanButton.style.display = "none"
+    startPageSmsConversation.style.display = "flex"
     smsSignal.play()
 
     setTimeout(() => {
         startPage.style.backgroundImage = "url('../images/Cover_Page_Edit.jpg')"
-        humanButton.style.display = "flex"
-    }, 10000);
+        startPageSmsConversation.style.display = "none"
+        humanButton.style.display = "none"
+    }, 15000);
 
+})
+
+loadingSms.addEventListener('animationend', () => {
+
+    circle1.style.display = "none"
+    circle2.style.display = "none"
+    circle3.style.display = "none"
+
+    loadingSms.style.justifyContent = "left"
+    loadingSms.style.alignItems = "normal"
+    loadingSms.style.padding = "15px"
+
+
+    const firstMessage = "Hej Love, jag har tänkt mycket på dig och ditt brev..."
+    const firstMessageSplit = firstMessage.split("")
+    let currentLetter = 0
+
+    const smsInterval = setInterval(() => {
+        loadingSms.innerHTML += firstMessageSplit[currentLetter]
+        currentLetter++
+
+        if (currentLetter === firstMessageSplit.length) {
+            clearInterval(smsInterval)
+        }
+    }, 100)
 })
 
 
@@ -42,7 +70,6 @@ showMyPageInput.addEventListener("keydown", (event) => {
         switchPage(showMyPageInput.value)
         showMyPageInput.value = ""
     }
-
 })
 
 //geoLocation
