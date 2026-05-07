@@ -1,10 +1,10 @@
 function switchPage(page) {
     allPages.forEach(e => {
         e.classList.add("hide")
+        e.classList.remove("reveal")
     })
-    let myPage = document.querySelector(`#${page}`)
-    myPage.classList.remove("hide")
-    myPage.classList.add("reveal")
+    page.classList.remove("hide")
+    page.classList.add("reveal")
 }
 
 let currentPage = 2;
@@ -16,8 +16,8 @@ function showPage(index) {
 }
 
 function goBackAPage() {
-    currentPage.classList.remove("reveal");
-    currentPage.classList.add("hide");
+    allPages[currentPage].classList.remove("reveal");
+    allPages[currentPage].classList.add("hide");
     if (currentPage > 0) {
         currentPage--;
         showPage(currentPage);

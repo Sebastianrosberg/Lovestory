@@ -21,19 +21,15 @@
 
     <div id="geoLocationCircle"></div>
 
-    <div id="revealMyPage">
-        <p>Skriv in den pagen du arbetar med så blir alla andra onsynliga och din visas</p>
-        <input id="myChosenPage" type="text">
-    </div>
-
     <main>
-        <div class="container hide" id="startPage">
+        <div class="container reveal" id="startPage">
             <div id="startPageSmsConversation">
                 <div id="valentinaSmsName">Valentina</div>
                 <div id="loadingSms">
                     <div class="smsCircle" id="circle1"></div>
                     <div class="smsCircle" id="circle2"></div>
                     <div class="smsCircle" id="circle3"></div>
+                    <p id="loadingSmsP"></p>
                 </div>
                 <div id="message2"></div>
             </div>
@@ -99,7 +95,9 @@
                 dejten var de omöjliga att separera. Hon spelade piano och han skissade på allt en blyertspenna skulle
                 kunna markera.
             </p>
-            <button class="nextButton">Nästa</button>
+            <div id="firstChapterButton">
+                <button class="nextButton">Nästa</button>
+            </div>
         </div>
 
         <div class="container hide" id="chapter2">
@@ -122,8 +120,10 @@
             <img src="../images/image copy.png" alt="" id="letterPicture">
             <h2>Valentinas brev</h2>
             <img src="../images/image copy.png" alt="" id="letterPicture1">
-            <button class="backButton">Tillbaka</button>
-            <button class="nextButton">Nästa</button>
+            <div class="navigationButtons">
+                <button class="backButton">Tillbaka</button>
+                <button class="nextButton">Nästa</button>
+            </div>
         </div>
         <div id="overlay">
             <div id="letter">
@@ -222,11 +222,22 @@
         </div>
 
         <div class="container hide" id="chapter3">
-            <p class="breadText">Efter en sen dag på universitetet tar de en promenad ner till en utkiksplats i Västra Hamnen. De är tystare än vanligt, som om staden håller andan. Långt bort i horisonten sträcker sig Öresundsbron över vatten, upplyst i det svaga kvällsljuset som de ser på så nära. Båda känner en melankoli i luften. De har varit här många gånger innan, men denna kväll känns annorlunda, tyngre och nästan förutbestämd. 
+            <p class="breadText">Efter en sen dag på universitetet tar de en promenad ner till en utkiksplats i Västra
+                Hamnen. De är tystare än vanligt, som om staden håller andan. Långt bort i horisonten sträcker sig
+                Öresundsbron över vatten, upplyst i det svaga kvällsljuset som de ser på så nära. Båda känner en
+                melankoli i luften. De har varit här många gånger innan, men denna kväll känns annorlunda, tyngre och
+                nästan förutbestämd.
             </p>
-            <p class="breadText">De har nu pluggat två år på Malmö Universitet och fått avslag för varje ansökan till sina universitet i Köpenhamn. Nu är det dags igen att öppna antagningsbeskedet. Hjärtat bultar, andetagen blir djupare och snabbare. Trots den tunga känslan är Love redo med en flaska bubbel och Valentina har bakat brownies, deras favorit, för att fira. De båda möts dock av en överraskning de aldrig hade kunnat förväntat sig. Han kom in men inte hon.
+            <p class="breadText">De har nu pluggat två år på Malmö Universitet och fått avslag för varje ansökan till
+                sina universitet i Köpenhamn. Nu är det dags igen att öppna antagningsbeskedet. Hjärtat bultar,
+                andetagen blir djupare och snabbare. Trots den tunga känslan är Love redo med en flaska bubbel och
+                Valentina har bakat brownies, deras favorit, för att fira. De båda möts dock av en överraskning de
+                aldrig hade kunnat förväntat sig. Han kom in men inte hon.
             </p>
-            <p class="breadText">Ångesten och besvikelsen växer mellan dem. Luften rinner ur henne och han vet inte vad han ska göra. Frågan som fick dem att krocka är, ska jag följa mina egna drömmar eller vara med sin kärlek? De båda inser att detta är början på ett långsamt avslut i deras förhållande. De bråkar inte utan bara glider långsamt ifrån varandra och fortsätter sina egna liv. 
+            <p class="breadText">Ångesten och besvikelsen växer mellan dem. Luften rinner ur henne och han vet inte vad
+                han ska göra. Frågan som fick dem att krocka är, ska jag följa mina egna drömmar eller vara med sin
+                kärlek? De båda inser att detta är början på ett långsamt avslut i deras förhållande. De bråkar inte
+                utan bara glider långsamt ifrån varandra och fortsätter sina egna liv.
             </p>
             <div class="navigationButtons">
                 <button class="backButton">Tillbaka</button>
@@ -235,9 +246,19 @@
         </div>
 
         <div class="container hide" id="chapter4">
-            <p class="breadText">De hade inte träffats på hela sommaren. Han hade varit upptagen med flytten till Köpenhamn för att påbörja sin utbildning, medan hon stannade kvar i Malmö. Någonstans längs vägen hade de slutat höra av sig. Inte medvetet, inte som ett beslut, det bara rann ut i sanden. SMS som önskas att skickas, når aldrig fram. Hon försökte att inte tänka på det. På honom. På hur enkelt det verkade vara för honom att bara börja om och han får leva ett liv hon själv har drömt om. Själv kände hon sig kvarlämnad, som att hon stod kvar på samma plats.
+            <p class="breadText">De hade inte träffats på hela sommaren. Han hade varit upptagen med flytten till
+                Köpenhamn för att påbörja sin utbildning, medan hon stannade kvar i Malmö. Någonstans längs vägen hade
+                de slutat höra av sig. Inte medvetet, inte som ett beslut, det bara rann ut i sanden. SMS som önskas att
+                skickas, når aldrig fram. Hon försökte att inte tänka på det. På honom. På hur enkelt det verkade vara
+                för honom att bara börja om och han får leva ett liv hon själv har drömt om. Själv kände hon sig
+                kvarlämnad, som att hon stod kvar på samma plats.
             </p>
-            <p class="breadText">Hon började söka jobb, mest för att fylla dagarna utöver studierna. Det var hennes sista två terminer och varje gång hon kom hem efter en föreläsning slog tomheten henne. Rummet som en gång var deras kändes oförändrat men ändå inte, som att något saknades i luften. Hon behövde något mer, något som kunde fylla hennes vardag och dra henne bort från tankarna på att han inte längre var där. När erbjudandet kom från Malmö Live, en tjänst som pianist i deras konserthall, satt hon länge och stirrade på mejlet. Det var det här hon hade velat. Länge.
+            <p class="breadText">Hon började söka jobb, mest för att fylla dagarna utöver studierna. Det var hennes
+                sista två terminer och varje gång hon kom hem efter en föreläsning slog tomheten henne. Rummet som en
+                gång var deras kändes oförändrat men ändå inte, som att något saknades i luften. Hon behövde något mer,
+                något som kunde fylla hennes vardag och dra henne bort från tankarna på att han inte längre var där. När
+                erbjudandet kom från Malmö Live, en tjänst som pianist i deras konserthall, satt hon länge och stirrade
+                på mejlet. Det var det här hon hade velat. Länge.
             </p>
             <div class="navigationButtons">
                 <button class="backButton">Tillbaka</button>
@@ -246,9 +267,17 @@
         </div>
 
         <div class="container hide" id="chapter5">
-            <p class="breadText">Han gick på en konsert på Malmö Live, ovetande om att hon hade fått jobb där. Musiken bar honom genom salen som ekar av applåder. När han lät blicken vandra över scenen, såg han henne. För honom var det oväntat, nästan overkligt, som ett minne fört in i nuet utan en förvarning. Efter föreställningen stannade han kvar och gick fram till henne med ett leende som bar mer än de ord han faktiskt sa. Han gratulerade henne och hennes svar kom med både värme och en försiktig nyfikenhet.
+            <p class="breadText">Han gick på en konsert på Malmö Live, ovetande om att hon hade fått jobb där. Musiken
+                bar honom genom salen som ekar av applåder. När han lät blicken vandra över scenen, såg han henne. För
+                honom var det oväntat, nästan overkligt, som ett minne fört in i nuet utan en förvarning. Efter
+                föreställningen stannade han kvar och gick fram till henne med ett leende som bar mer än de ord han
+                faktiskt sa. Han gratulerade henne och hennes svar kom med både värme och en försiktig nyfikenhet.
             </p>
-            <p class="breadText">Mötet blev början på något nytt och betydde mer än vad det egentligen borde. Konversationen var bara några minuter, men något hade förändrats i sättet de såg på varandra, mindre tungt för det som varit och mer öppet för det som kan bli. Den kvällen ledde till att de började brevväxla och sakta men säkert återfick de kontakten de en gång hade förlorat, omformad av den tid som hade gått. 
+            <p class="breadText">Mötet blev början på något nytt och betydde mer än vad det egentligen borde.
+                Konversationen var bara några minuter, men något hade förändrats i sättet de såg på varandra, mindre
+                tungt för det som varit och mer öppet för det som kan bli. Den kvällen ledde till att de började
+                brevväxla och sakta men säkert återfick de kontakten de en gång hade förlorat, omformad av den tid som
+                hade gått.
             </p>
             <div class="navigationButtons">
                 <button class="backButton">Tillbaka</button>
@@ -257,9 +286,21 @@
         </div>
 
         <div class="container hide" id="chapter6">
-            <p class="breadText">Han har varit mycket stressad över högar av skolarbete, samtidigt som hon har varit upptagen med sitt jobb. För henne har det också varit känslosamt att pendla över till Köpenhamn, där hennes egen längtan efter att en dag få bo där växer sig allt starkare. Efter flera veckor av brevväxlande blir längtan till slut för stor. Han bestämmer sig för att ta tåget över för att överraska henne på hennes lediga dag. Han bjuder henne på en fika i vårsolen på det mysiga caféet i Slottsträdgården. Där sjunker de djupt in i samtal om allt som hänt under veckorna de varit ifrån varandra.
+            <p class="breadText">Han har varit mycket stressad över högar av skolarbete, samtidigt som hon har varit
+                upptagen med sitt jobb. För henne har det också varit känslosamt att pendla över till Köpenhamn, där
+                hennes egen längtan efter att en dag få bo där växer sig allt starkare. Efter flera veckor av
+                brevväxlande blir längtan till slut för stor. Han bestämmer sig för att ta tåget över för att överraska
+                henne på hennes lediga dag. Han bjuder henne på en fika i vårsolen på det mysiga caféet i
+                Slottsträdgården. Där sjunker de djupt in i samtal om allt som hänt under veckorna de varit ifrån
+                varandra.
             </p>
-            <p class="breadText">Tiden tycks stanna och de tappar uppfattningen om både tid och rum medan de bara faller djupare in i varandras sällskap och ögonkontakt. Efter fikan vandrade de vidare genom parken, längs grusgångar som knastrade under deras steg. Träden stod i knopp, och vinden rörde sig försiktigt genom grenarna. Det var där, mitt bland välbekanta stigar och vårens första livstecken, som de insåg att de funnit sig själva i minnen från första dejten. Efter den dagen fortsatte de att brevväxla för att dela sina upplevelser med varandra. I breven skickade de också små, betydelsefulla saker, föremål som bar spår av deras vardag och som gjorde kontakten ännu mer personlig.
+            <p class="breadText">Tiden tycks stanna och de tappar uppfattningen om både tid och rum medan de bara faller
+                djupare in i varandras sällskap och ögonkontakt. Efter fikan vandrade de vidare genom parken, längs
+                grusgångar som knastrade under deras steg. Träden stod i knopp, och vinden rörde sig försiktigt genom
+                grenarna. Det var där, mitt bland välbekanta stigar och vårens första livstecken, som de insåg att de
+                funnit sig själva i minnen från första dejten. Efter den dagen fortsatte de att brevväxla för att dela
+                sina upplevelser med varandra. I breven skickade de också små, betydelsefulla saker, föremål som bar
+                spår av deras vardag och som gjorde kontakten ännu mer personlig.
             </p>
             <div class="navigationButtons">
                 <button class="backButton">Tillbaka</button>
@@ -268,7 +309,14 @@
         </div>
 
         <div class="container hide" id="chapter7">
-            <p class="breadText">En kväll i Malmö gick de ut på en bar tillsammans med några av hennes arbetskamrater. Det var första gången han träffade dem och efter några drinkar och timmar av småprat hade stämningen blivit allt högre. Musiken höjdes, rösterna steg och de märkte tydligt att det var sent. I barnens ekande glada röster spelades plötsligt en låt Love och Valentina båda kände igen. De mötte sina blickar, de tittade på varandra på ett varmt sätt och gav ett litet leende. Utan att tveka började de sjunga högt tillsammans, helt obrydda om omgivningen, i sin egen värld. De skrattade, sjöng och dansade vid bordet, medan hennes kollegor först såg förvånade ut men snart brast ut i skratt. Låten var deras. Låten de alltid spelade när de var tillsammans.
+            <p class="breadText">En kväll i Malmö gick de ut på en bar tillsammans med några av hennes arbetskamrater.
+                Det var första gången han träffade dem och efter några drinkar och timmar av småprat hade stämningen
+                blivit allt högre. Musiken höjdes, rösterna steg och de märkte tydligt att det var sent. I barnens
+                ekande glada röster spelades plötsligt en låt Love och Valentina båda kände igen. De mötte sina blickar,
+                de tittade på varandra på ett varmt sätt och gav ett litet leende. Utan att tveka började de sjunga högt
+                tillsammans, helt obrydda om omgivningen, i sin egen värld. De skrattade, sjöng och dansade vid bordet,
+                medan hennes kollegor först såg förvånade ut men snart brast ut i skratt. Låten var deras. Låten de
+                alltid spelade när de var tillsammans.
             </p>
             <div class="navigationButtons">
                 <button class="backButton">Tillbaka</button>
@@ -277,9 +325,21 @@
         </div>
 
         <div class="container hide" id="chapter8">
-            <p class="breadText">Love åkte till Malmö för att träffa Valentina, de hade bestämt att ses på saluhallen. Det var en sådan plats där ljudet nästan aldrig dör ut. Bestick mot tallrikar, röster som blandas och doften av mat. När de möttes där kändes han ovanligt distanserad, som om något höll honom tillbaka. Inte kall, men frånvarande på ett sätt som är svårt att sätta fingret på. Han låg när han såg henne men det nådde inte riktigt hela vägen. Trots detta satt de i flera timmar och hann både äta middag och efterrätt tillsammans. De pratade om småsaker, resor, vardagen och om sådant som är lätt att tala om högt. Kvällen rullade på. Men det var något med mellan dem, något outtalat. Valentina kunde inte släppa det, Love kändes på något sätt annorlunda. Sättet han ibland tappade bort blicken i mitten av en mening. Hur han blev tyst lite för länge innan han svarade. Som om han bar på något inombords. Hon vågade inte fråga, inte här inte nu. Hon var rädd att hennes ord skulle förstöra kvällen.
+            <p class="breadText">Love åkte till Malmö för att träffa Valentina, de hade bestämt att ses på saluhallen.
+                Det var en sådan plats där ljudet nästan aldrig dör ut. Bestick mot tallrikar, röster som blandas och
+                doften av mat. När de möttes där kändes han ovanligt distanserad, som om något höll honom tillbaka. Inte
+                kall, men frånvarande på ett sätt som är svårt att sätta fingret på. Han låg när han såg henne men det
+                nådde inte riktigt hela vägen. Trots detta satt de i flera timmar och hann både äta middag och efterrätt
+                tillsammans. De pratade om småsaker, resor, vardagen och om sådant som är lätt att tala om högt. Kvällen
+                rullade på. Men det var något med mellan dem, något outtalat. Valentina kunde inte släppa det, Love
+                kändes på något sätt annorlunda. Sättet han ibland tappade bort blicken i mitten av en mening. Hur han
+                blev tyst lite för länge innan han svarade. Som om han bar på något inombords. Hon vågade inte fråga,
+                inte här inte nu. Hon var rädd att hennes ord skulle förstöra kvällen.
             </p>
-            <p class="breadText">När de tillslut reste sig från bordet kändes luften mellan dem både lätt och tung på samma gång. På ett sätt som inte går att beskriva. De gick långsamt ut från saluhallen och stod en stund i kvällsluften vid solnedgången innan de bestämde sig för att de skulle hem till henne efteråt, utan att riktigt uttala sig om det. 
+            <p class="breadText">När de tillslut reste sig från bordet kändes luften mellan dem både lätt och tung på
+                samma gång. På ett sätt som inte går att beskriva. De gick långsamt ut från saluhallen och stod en stund
+                i kvällsluften vid solnedgången innan de bestämde sig för att de skulle hem till henne efteråt, utan att
+                riktigt uttala sig om det.
             </p>
             <div class="navigationButtons">
                 <button class="backButton">Tillbaka</button>
@@ -288,9 +348,21 @@
         </div>
 
         <div class="container hide" id="chapter9">
-            <p class="breadText">Hon hade nyligen flyttat in i en ny lägenhet tillsammans med en arbetskamrat. Den här kvällen var hon ensam eftersom rumskamraten var bortrest, så de hade bestämt att han skulle sova över. På vägen hem från Saluhallen började de prata om framtiden. Valentina ville veta om de skulle försöka igen och hitta tillbaka till varandra, till samma liv och flytta ihop eller fortsätta leva på varsitt håll till något avgjorde saken, särskilt eftersom hon ännu inte visste om hon skulle komma in på Musikhögskolan i Köpenhamn. Han verkade tveksam, gled undan frågorna, lät meningarna rinna ut innan de blev tydliga och något i hans ton gjorde henne orolig. Som om han redan var på väg bort även om han stod bredvid henne. 
+            <p class="breadText">Hon hade nyligen flyttat in i en ny lägenhet tillsammans med en arbetskamrat. Den här
+                kvällen var hon ensam eftersom rumskamraten var bortrest, så de hade bestämt att han skulle sova över.
+                På vägen hem från Saluhallen började de prata om framtiden. Valentina ville veta om de skulle försöka
+                igen och hitta tillbaka till varandra, till samma liv och flytta ihop eller fortsätta leva på varsitt
+                håll till något avgjorde saken, särskilt eftersom hon ännu inte visste om hon skulle komma in på
+                Musikhögskolan i Köpenhamn. Han verkade tveksam, gled undan frågorna, lät meningarna rinna ut innan de
+                blev tydliga och något i hans ton gjorde henne orolig. Som om han redan var på väg bort även om han stod
+                bredvid henne.
             </p>
-            <p class="breadText">När de kom hem förändrades stämningen helt. Han blev tyst, sjönk ner i soffan och satt mest med telefonen i handen där han försvann in i skärmen. Hon försökte nå honom, små kommentarer, försiktiga frågor, men möttes endast av korta svar eller tystnad och hon kände att något var fel. Till slut orkade hon inte hålla samtalet levande längre och satte på en film, mest för att oljudet ska fylla rummet med något som inte var deras tystnad. De somnade i soffan, sida vid sida, men inte riktigt tillsammans, utan att riktigt ha pratat klart om det som egentligen betydde något. 
+            <p class="breadText">När de kom hem förändrades stämningen helt. Han blev tyst, sjönk ner i soffan och satt
+                mest med telefonen i handen där han försvann in i skärmen. Hon försökte nå honom, små kommentarer,
+                försiktiga frågor, men möttes endast av korta svar eller tystnad och hon kände att något var fel. Till
+                slut orkade hon inte hålla samtalet levande längre och satte på en film, mest för att oljudet ska fylla
+                rummet med något som inte var deras tystnad. De somnade i soffan, sida vid sida, men inte riktigt
+                tillsammans, utan att riktigt ha pratat klart om det som egentligen betydde något.
             </p>
             <div class="navigationButtons">
                 <button class="backButton">Tillbaka</button>
@@ -299,11 +371,16 @@
         </div>
 
         <div class="container hide" id="chapter10">
-            <p class="breadText">Hon vaknade till en tom lägenhet. Ljuset var blekt och kallt. För ett ögonblick var allt stilla. Utomhus regnade och åskade det. På bordet låg brevet – det sista fragmentet. Hon visste redan innan hon rörde vid det att något hade förändrats. Pappret kändes för lätt i handen, som om det inte riktigt ville bära de orden som stod skrivet i det. Brevet var en skör, brutalt ärlig bekännelse om otrohet. Han hade försökt rättfärdiga sig själv med att de "aldrig sagt att de var ihop", men varje mening föll isär när hon läste och orden var bara ett tunt försvar för ett svek som rasade ner hennes värld. Med bultande hjärta och tårar i ögonen läste hon brevet: 
+            <p class="breadText">Hon vaknade till en tom lägenhet. Ljuset var blekt och kallt. För ett ögonblick var
+                allt stilla. Utomhus regnade och åskade det. På bordet låg brevet – det sista fragmentet. Hon visste
+                redan innan hon rörde vid det att något hade förändrats. Pappret kändes för lätt i handen, som om det
+                inte riktigt ville bära de orden som stod skrivet i det. Brevet var en skör, brutalt ärlig bekännelse om
+                otrohet. Han hade försökt rättfärdiga sig själv med att de "aldrig sagt att de var ihop", men varje
+                mening föll isär när hon läste och orden var bara ett tunt försvar för ett svek som rasade ner hennes
+                värld. Med bultande hjärta och tårar i ögonen läste hon brevet:
             </p>
-            <div class="navigationButtons">
+            <div id="lastChapterButton">
                 <button class="backButton">Tillbaka</button>
-                <button class="nextButton">Nästa</button>
             </div>
         </div>
     </main>
