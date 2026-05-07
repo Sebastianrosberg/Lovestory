@@ -130,3 +130,48 @@ closeletter1.addEventListener("click", function () {
     overlay1.style.display = "none"
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Gå fram eller bak mellan sidorna
+
+
+document.querySelectorAll(".backButton").forEach(btn => {
+    btn.addEventListener("click", () => {
+        goBackAPage();
+    })
+})
+
+document.querySelectorAll(".nextButton").forEach(btn => {
+    btn.addEventListener("click", () => {
+        goForthAPage();
+    })
+})

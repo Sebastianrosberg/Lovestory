@@ -29,6 +29,9 @@ body {
     padding-top: 44px;
     overflow-y: hidden;
     min-height: 893px;
+    padding: 20px;
+    border: 1px solid black;
+    background-image: url(../images/image.png);
 }
 
 main {
@@ -71,6 +74,11 @@ main {
     font-size: 16px;
     font-family: SpaceGrotesk;
     line-height: 1.5;
+}
+
+.navigationButtons {
+    display: flex;
+    justify-content: space-between;
 }
 
 #revealMyPage {
