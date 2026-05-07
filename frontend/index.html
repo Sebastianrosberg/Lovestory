@@ -20,19 +20,15 @@
 
     <div id="geoLocationCircle"></div>
 
-    <div id="revealMyPage">
-        <p>Skriv in den pagen du arbetar med så blir alla andra onsynliga och din visas</p>
-        <input id="myChosenPage" type="text">
-    </div>
-
     <main>
-        <div class="container hide" id="startPage">
+        <div class="container reveal" id="startPage">
             <div id="startPageSmsConversation">
                 <div id="valentinaSmsName">Valentina</div>
                 <div id="loadingSms">
                     <div class="smsCircle" id="circle1"></div>
                     <div class="smsCircle" id="circle2"></div>
                     <div class="smsCircle" id="circle3"></div>
+                    <p id="loadingSmsP"></p>
                 </div>
                 <div id="message2"></div>
             </div>
@@ -87,7 +83,7 @@
             <button id="chapter1Next">Nästa</button>
         </div>
 
-        <div class="container" id="chapter2">
+        <div class="container hide" id="chapter2">
             <h4 class="currentChapter">1 av 6</h4>
             <h1 class="chapterTitle">Sommar</h1>
             <div id="chapt2FirstImg">
