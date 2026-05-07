@@ -28,6 +28,7 @@ body {
     max-width: 100%;
     padding-top: 44px;
     overflow-y: hidden;
+    min-height: 893px;
 }
 
 main {
