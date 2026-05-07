@@ -133,48 +133,53 @@ if (window.localStorage.getItem("visitedTargets")) {
 navigator.geolocation.watchPosition((position) => {
     let userLat = position.coords.latitude;
     let userLng = position.coords.longitude;
+    console.log("Position hämtad:", userLat, userLng);
 
     for (let chapterName in TargetLocations) {
         let chapter = TargetLocations[chapterName]; // dvs. { latitude ..., longitude ... }
+        console.log("Kollar:", chapterName, "visited:", visitedTargets[chapterName]);
 
         if (!visitedTargets[chapterName]) {
 
-            let isAtChapter = isWithinDistance(chapter.latitude, chapter.longitude, userLat, userLng);
+
+            let isAtChapter = isWithinDistance(userLat, userLng, chapter.latitude, chapter.longitude);
+            console.log(chapterName, "isAtChapter:", isAtChapter);
             if (isAtChapter) {
                 visitedTargets[chapterName] = true;
                 window.localStorage.setItem("visitedTargets", JSON.stringify(visitedTargets));
                 if (chapterName == "chap1") {
-                    let chap1Span = document.querySelector("#chapter1Span");
+                    let chap1Span = document.querySelector("#chap1Span");
                     chap1Span.textContent = "🔓";
+                    console.log("Funkar!");
                 } else if (chapterName == "chap2") {
-                    let chap2Span = document.querySelector("#chapter2Span");
+                    let chap2Span = document.querySelector("#chap2Span");
                     chap2Span.textContent = "🔓"
                 } else if (chapterName == "chap3") {
-                    let chap3Span = document.querySelector("#chapter3Span");
+                    let chap3Span = document.querySelector("#chap3Span");
                     chap3Span.textContent = "🔓"
                 } else if (chapterName == "chap4") {
-                    let chap4Span = document.querySelector("#chapter4Span");
+                    let chap4Span = document.querySelector("#chap4Span");
                     chap4Span.textContent = "🔓"
                 } else if (chapterName == "chap5") {
-                    let chap5Span = document.querySelector("#chapter5Span");
+                    let chap5Span = document.querySelector("#chap5Span");
                     chap5Span.textContent = "🔓"
                 } else if (chapterName == "chap6") {
-                    let chap6Span = document.querySelector("#chapter6Span");
+                    let chap6Span = document.querySelector("#chap6Span");
                     chap6Span.textContent = "🔓"
                 } else if (chapterName == "chap7") {
-                    let chap7Span = document.querySelector("#chapter7Span");
+                    let chap7Span = document.querySelector("#chap7Span");
                     chap7Span.textContent = "🔓"
                 } else if (chapterName == "chap8") {
-                    let chap8Span = document.querySelector("#chapter8Span");
+                    let chap8Span = document.querySelector("#chap8Span");
                     chap8Span.textContent = "🔓"
                 } else if (chapterName == "chap9") {
-                    let chap9Span = document.querySelector("#chapter9Span");
+                    let chap9Span = document.querySelector("#chap9Span");
                     chap9Span.textContent = "🔓"
                 } else if (chapterName == "chap10") {
-                    let chap10Span = document.querySelector("#chapter10Span");
+                    let chap10Span = document.querySelector("#chap10Span");
                     chap10Span.textContent = "🔓"
                 } else if (chapterName == "chap11") {
-                    let chap11Span = document.querySelector("#chapter11Span");
+                    let chap11Span = document.querySelector("#chap11Span");
                     chap11Span.textContent = "🔓"
                 }
             }
