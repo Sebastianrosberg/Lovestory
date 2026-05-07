@@ -7,7 +7,7 @@
     width: 2px;
 }
 
-#chapter2 img {
+#honBild {
     width: 50%;
 }
 
@@ -36,4 +36,12 @@
 span {
     font-weight: bold;
     font-size: large;
+}
+
+#letterPicture,
+#letterPicture1 {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
