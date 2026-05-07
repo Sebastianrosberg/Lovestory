@@ -7,10 +7,14 @@ let chapter3Page = document.querySelector("#chapter3");
 let chapter4Page = document.querySelector("#chapter4");
 let chapter5Page = document.querySelector("#chapter5");
 let chapter6Page = document.querySelector("#chapter6");
+let chapter7Page = document.querySelector("#chapter7");
+let chapter8Page = document.querySelector("#chapter8");
+let chapter9Page = document.querySelector("#chapter9");
+let chapter10Page = document.querySelector("#chapter10");
 let geoLocCircle = document.querySelector("#geoLocationCircle");
 let smsSignal = document.querySelector("#smsSignal")
 
-let allPages = [startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page];
+let allPages = [startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page];
 
 let humanButton = document.querySelector("#humanButton");
 let circle1 = document.querySelector("#circle1");

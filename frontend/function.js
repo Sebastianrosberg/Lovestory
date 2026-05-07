@@ -16,8 +16,8 @@ function showPage(index) {
 }
 
 function goBackAPage() {
-    currentPage.classList.remove("reveal");
-    currentPage.classList.add("hide");
+    allPages[currentPage].classList.remove("reveal");
+    allPages[currentPage].classList.add("hide");
     if (currentPage > 0) {
         currentPage--;
         showPage(currentPage);
