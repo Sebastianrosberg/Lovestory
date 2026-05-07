@@ -26,12 +26,13 @@
     flex: 1;
     padding-top: 10px;
     padding-left: 100px;
+    margin-top: 450px;
 }
 
 #humanButton {
     height: 200px;
     width: 45px;
-
+    display: flex;
     border-radius: 30px;
     transform: rotate(-3deg);
     opacity: 0;
@@ -58,13 +59,16 @@
    animation-fill-mode: forwards;
 }
 
+#loadingSmsP {
+    margin: 0;
+}
+
 #valentinaSmsName {
     font-size: 25px;
     font-weight: 700;
     text-align: center;
     margin: 30px 0px;
     width: 100%;
-    
 }
  
 .smsCircle {
@@ -72,7 +76,7 @@
     width: 10px;
     border: 1px solid gray;
     border-radius: 50%;
-
+    display: flex;
     animation-name: smsColor;
     animation-duration: 1750ms;
     animation-iteration-count: infinite;

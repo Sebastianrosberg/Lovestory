@@ -22,6 +22,8 @@ let circle2 = document.querySelector("#circle2");
 let circle3 = document.querySelector("#circle3");
 let loadingSms = document.querySelector("#loadingSms")
 let startPageSmsConversation = document.querySelector("#startPageSmsConversation")
+let loadingSmsP = document.querySelector("#loadingSmsP")
+let phoneRevealTimeout;
 
 // Start Page Listeneres
 
@@ -31,11 +33,19 @@ humanButton.addEventListener("click", () => {
     humanButton.style.display = "none"
     startPageSmsConversation.style.display = "flex"
     smsSignal.play()
+    loadingSms.style.alignItems = "center"
+    loadingSms.style.justifyContent = "center"
+    loadingSms.style.display = "flex"
 
-    setTimeout(() => {
+    phoneRevealTimeout = setTimeout(() => {
         startPage.style.backgroundImage = "url('../images/Cover_Page_Edit.jpg')"
         startPageSmsConversation.style.display = "none"
-        humanButton.style.display = "none"
+        humanButton.style.display = "flex"
+
+        circle1.style.display = "block"
+        circle2.style.display = "block"
+        circle3.style.display = "block"
+        loadingSmsP.textContent = ""
     }, 15000);
 
 })
@@ -46,9 +56,9 @@ loadingSms.addEventListener('animationend', () => {
     circle2.style.display = "none"
     circle3.style.display = "none"
 
-    loadingSms.style.justifyContent = "left"
-    loadingSms.style.alignItems = "normal"
-    loadingSms.style.padding = "15px"
+    loadingSms.style.padding = "10px"
+    loadingSms.style.alignItems = "flex-start"
+    loadingSms.style.justifyContent = "flex-start"
 
 
     const firstMessage = "Hej Love, jag har tänkt mycket på dig och ditt brev..."
@@ -56,7 +66,7 @@ loadingSms.addEventListener('animationend', () => {
     let currentLetter = 0
 
     const smsInterval = setInterval(() => {
-        loadingSms.innerHTML += firstMessageSplit[currentLetter]
+        loadingSmsP.textContent += firstMessageSplit[currentLetter]
         currentLetter++
 
         if (currentLetter === firstMessageSplit.length) {
@@ -65,15 +75,19 @@ loadingSms.addEventListener('animationend', () => {
     }, 100)
 })
 
+startPageSmsConversation.addEventListener("click", () => {
+    startPageSmsConversation.style.transition = "transform 1.5s ease"
+    startPageSmsConversation.style.transform = "scale(5)"
 
-// Diven som visar din page (Vi tar bort när vi är klara)
+    loadingSms.style.display = "none"
 
-let showMyPageInput = document.querySelector("#myChosenPage")
-showMyPageInput.addEventListener("keydown", (event) => {
-    if (event.key == "Enter") {
-        switchPage(showMyPageInput.value)
-        showMyPageInput.value = ""
-    }
+    clearTimeout(phoneRevealTimeout)
+    setTimeout(() => {
+        console.log("TEST");
+        
+        switchPage(messagePage)
+    }, 2000)
+    
 })
 
 //geoLocation
