@@ -92,8 +92,8 @@ startPageSmsConversation.addEventListener("click", () => {
 
 //geoLocation
 
-let radius = 50;
-let TargetLocation = {
+let RADIUS = 50;
+let TargetLocations = {
     chap1: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
     chap1loc2: { latitude: 55.60186430935728, longitude: 12.9888972842864 },
     chap2: { latitude: 55.610959077289216, longitude: 12.982203891552459 },
@@ -108,13 +108,58 @@ let TargetLocation = {
     chap11: { latitude: 55.59728614848932, longitude: 12.990082184069786 }
 }
 
-navigator.geolocation.watchPosition((position) => {
-    let userCordLatitude = position.coords.latitude;
-    let userCordLongitude = position.coords.longitude;
+// User store if they've been at a target or not
+let visitedTargets = {
+    chap1: false,
+    chap1loc2: false,
+    chap2: false,
+    chap3: false,
+    chap4: false,
+    chap5: false,
+    chap6: false,
+    chap7: false,
+    chap8: false,
+    chap9: false,
+    chap10: false,
+    chap11: false
+}
 
-    let distance = getDistanceM(userCordLatitude, userCordLongitude, targetLocation.latitude, targetLocation.longitude)
-    if (distance <= radius) {
-        geoLocCircle.style.backgroundColor = "green"
+// check if something was stored in local storage (ie. the cache)
+if (window.localStorage.getItem("visitedTargets")) {
+    visitedTargets = JSON.parse(window.localStorage.getItem("visitedTargets"));
+}
+
+navigator.geolocation.watchPosition((position) => {
+    let userLat = position.coords.latitude;
+    let userLng = position.coords.longitude;
+
+    for (let chapterName in TargetLocations) {
+        let chapter = TargetLocations[chapterName]; // dvs. { latitude ..., longitude ... }
+
+        if (!visitedTargets[chapterName]) {
+
+            let isAtChapter = isWithinDistance(chapter.latitude, chapter.longitude, userLat, userLng);
+            if (isAtChapter) {
+                visitedTargets[chapterName] = true;
+                window.localStorage.setItem("visitedTargets", JSON.stringify(visitedTargets));
+                if (chapterName == "chap1") {
+                    let chap1Span = document.querySelector("#chapter1Span");
+                    chap1Span.textContent = "🔓";
+                }
+            }
+        }
+    }
+
+    if (!visitedTargets.chap1) {
+        let chap1 = TargetLocations.chap1;
+        let isAtChap1 = isWithinDistance(chap1.latitude, chap1.longitude, userLat, userLng);
+        if (isAtChap1) {
+            visitedTargets.chap1 = true;
+            // Store changes to local storage
+            window.localStorage.setItem("visitedTargets", JSON.stringify(visitedTargets));
+
+            // update buttons accordingly
+        }
     }
 })
 
@@ -125,6 +170,15 @@ function getDistanceM(lat1, lng1, lat2, lng2) {
     const dx = (lng2 - lng1) * metersPerDeg * Math.cos(lat1 * Math.PI / 180);
     const dy = (lat2 - lat1) * metersPerDeg;
     return Math.sqrt(dx * dx + dy * dy);
+}
+
+function isWithinDistance(userLat, userLng, targetLat, targetLng) {
+    let distance = getDistanceM(userLat, userLng, targetLat, targetLng);
+    if (distance <= RADIUS) {
+        // geoLocCircle.style.backgroundColor = "green"
+        return true;
+    }
+    return false;
 }
 
 //chapter 2
