@@ -2,6 +2,14 @@
 let visitedTargets = {
     chap1: false,
     chap2: false,
+    chap3: false,
+    chap4: false,
+    chap5: false,
+    chap6: false,
+    chap7: false,
+    chap8: false,
+    chap9: false,
+    chap10: false
 }
 
 // check if something was stored in local storage (ie. the cache)
@@ -20,6 +28,13 @@ navigator.geolocation.watchPosition((position) => {
         if (!visitedTargets[chapterName]) {
 
             let isAtChapter = isWithinDistance(chapter.latitude, chapter.longitude, userLat, userLng);
+            if (isAtChapter) {
+                window.localStorage.setItem("visitedTargets", JSON.stringify(visitedTargets));
+                if (chapter == "chap1") {
+                    let chap1Span = document.querySelector("#chapter1Span");
+                    chap1Span.style.backgroundColor = "🔓";
+                }
+            }
         }
     }
 
@@ -44,3 +59,4 @@ function isWithinDistance(userLat, userLng, targetLat, targetLng) {
         return true;
     }
     return false;
+}
