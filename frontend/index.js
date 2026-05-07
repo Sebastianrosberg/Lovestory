@@ -84,10 +84,10 @@ startPageSmsConversation.addEventListener("click", () => {
     clearTimeout(phoneRevealTimeout)
     setTimeout(() => {
         console.log("TEST");
-        
+
         switchPage(messagePage)
     }, 2000)
-    
+
 })
 
 //geoLocation
@@ -147,6 +147,9 @@ closeletter1.addEventListener("click", function () {
     chapter2Page.style.display = "block"
     overlay1.style.display = "none"
 })
+
+//menuPage
+
 
 
 
