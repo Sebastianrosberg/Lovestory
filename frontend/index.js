@@ -145,6 +145,36 @@ navigator.geolocation.watchPosition((position) => {
                 if (chapterName == "chap1") {
                     let chap1Span = document.querySelector("#chapter1Span");
                     chap1Span.textContent = "🔓";
+                } else if (chapterName == chap2) {
+                    let chap2Span = document.querySelector("#chapter2Span");
+                    chap2Span.textContent = "🔓"
+                } else if (chapterName == chap3) {
+                    let chap3Span = document.querySelector("#chapter3Span");
+                    chap3Span.textContent = "🔓"
+                } else if (chapterName == chap4) {
+                    let chap4Span = document.querySelector("#chapter4Span");
+                    chap4Span.textContent = "🔓"
+                } else if (chapterName == chap5) {
+                    let chap5Span = document.querySelector("#chapter5Span");
+                    chap5Span.textContent = "🔓"
+                } else if (chapterName == chap6) {
+                    let chap6Span = document.querySelector("#chapter6Span");
+                    chap6Span.textContent = "🔓"
+                } else if (chapterName == chap7) {
+                    let chap7Span = document.querySelector("#chapter7Span");
+                    chap7Span.textContent = "🔓"
+                } else if (chapterName == chap8) {
+                    let chap8Span = document.querySelector("#chapter8Span");
+                    chap8Span.textContent = "🔓"
+                } else if (chapterName == chap9) {
+                    let chap9Span = document.querySelector("#chapter9Span");
+                    chap9Span.textContent = "🔓"
+                } else if (chapterName == chap10) {
+                    let chap10Span = document.querySelector("#chapter10Span");
+                    chap10Span.textContent = "🔓"
+                } else if (chapterName == chap11) {
+                    let chap11Span = document.querySelector("#chapter11Span");
+                    chap11Span.textContent = "🔓"
                 }
             }
         }
