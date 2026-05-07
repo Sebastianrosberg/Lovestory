@@ -19,7 +19,7 @@
 
 #messagePage h2 {
     font-size: 10px;
-    color: #ceced0;
+    color: #5d5d5d;
 }
 
 #messageBubble {
@@ -48,3 +48,4 @@
     background-color: rgba(80, 80, 213, 0.328);
     cursor: pointer;
 }
+
