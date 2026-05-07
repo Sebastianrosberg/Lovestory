@@ -203,3 +203,11 @@ document.querySelectorAll(".nextButton").forEach(btn => {
         goForthAPage();
     })
 })
+
+const continueButton = document.querySelector("#continueButton");
+const menuPage = document.querySelector("#menuPage");
+continueButton.addEventListener("click", () => {
+    menuPage.classList.remove("hide");
+    menuPage.classList.add("reveal");
+    messagePage.classList.add("hide");
+})
