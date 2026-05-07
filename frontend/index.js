@@ -92,14 +92,21 @@ startPageSmsConversation.addEventListener("click", () => {
 
 //geoLocation
 
-let radius = 30;
-let chapter1Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
-let chapter2Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
-let chapter3Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
-let chapter4Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
-let chapter5Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
-let chapter6Location = { latitude: 55.61095897390887, longitude: 12.994880656345511 };
-
+let radius = 50;
+let TargetLocation = {
+    chap1: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
+    chap1loc2: { latitude: 55.60186430935728, longitude: 12.9888972842864 },
+    chap2: { latitude: 55.610959077289216, longitude: 12.982203891552459 },
+    chap3: { latitude: 55.61964569300686, longitude: 12.978360885921994 },
+    chap4: { latitude: 55.60883601160361, longitude: 12.994571284715402 },
+    chap5: { latitude: 55.607770643254035, longitude: 12.99358194776491 },
+    chap6: { latitude: 55.603889968250826, longitude: 12.989189268726877 },
+    chap7: { latitude: 55.61178808302698, longitude: 12.997833611055748 },
+    chap8: { latitude: 55.60803874759567, longitude: 12.991047352501079 },
+    chap9: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
+    chap10: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
+    chap11: { latitude: 55.59728614848932, longitude: 12.990082184069786 }
+}
 
 navigator.geolocation.watchPosition((position) => {
     let userCordLatitude = position.coords.latitude;
