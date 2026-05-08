@@ -288,9 +288,6 @@ continueButton.addEventListener("click", () => {
 
 // Öppnar rätt kapitel beroende på vilket kapitel man klickar in sig på i menyn
 
-const transitionPage = document.querySelector("#chapterTransition");
-const chapterDate = document.querySelector("#chapterDate");
-
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("chapterButton")) {
         const pageIndex = Number(event.target.dataset.page);

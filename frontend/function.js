@@ -46,6 +46,9 @@ function backToMenu() {
     })
 }
 
+const transitionPage = document.querySelector("#chapterTransition");
+const chapterDate = document.querySelector("#chapterDate");
+
 function showDateTransition(date, pageIndex) {
     allPages.forEach(page => {
         page.classList.add("hide")

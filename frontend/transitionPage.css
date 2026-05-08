@@ -1,0 +1,31 @@
+@keyframes dateFade {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#chapterTransition {
+    opacity: 0;
+    animation: dateFade 4s backwards;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 893px;
+    max-width: 100%;
+}
+
+#chapterDate {
+    font-family: InstrumentSerif;
+}

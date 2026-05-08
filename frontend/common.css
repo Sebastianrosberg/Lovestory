@@ -59,6 +59,11 @@ main {
     font-style: italic;
 }
 
+.chapterOf {
+    padding-left: 8px;
+    margin: 0;
+}
+
 .chapterTitle {
     font-size: 32px;
     font-weight: 100;
@@ -75,29 +80,6 @@ main {
 .navigationButton {
     display: flex;
     justify-content: right;
-}
-
-@keyframes dateFade {
-    0% {
-        opacity: 0;
-    }
-
-    60% {
-        opacity: 1;
-    }
-
-    80% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-#chapterTransition {
-    opacity: 0;
-    animation: dateFade 4s backwards;
 }
 
 #revealMyPage {
