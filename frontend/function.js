@@ -45,3 +45,17 @@ function backToMenu() {
         menuPage.classList.add("reveal");
     })
 }
+
+function showDateTransition(date, pageIndex) {
+    allPages.forEach(page => {
+        page.classList.add("hide")
+    })
+
+    transitionPage.classList.remove("hide");
+    chapterDate.textContent = date;
+
+    setTimeout(() => {
+        transitionPage.classList.add("hide");
+        showPage(pageIndex);
+    }, 4500);
+}
