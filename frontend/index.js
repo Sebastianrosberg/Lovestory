@@ -290,6 +290,8 @@ continueButton.addEventListener("click", () => {
 
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("chapterButton")) {
+        // if (visitedTargets[])
+
         const pageIndex = Number(event.target.dataset.page);
         const date = event.target.dataset.date;
 
