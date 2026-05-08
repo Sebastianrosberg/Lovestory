@@ -15,6 +15,8 @@ function showPage(index) {
     allPages[index].classList.add("reveal");
 }
 
+/* 
+
 function goBackAPage() {
     allPages[currentPage].classList.remove("reveal");
     allPages[currentPage].classList.add("hide");
@@ -31,4 +33,15 @@ function goForthAPage() {
         currentPage++;
         showPage(currentPage);
     }
+}
+
+*/
+
+function backToMenu() {
+    allPages.forEach(page => {
+        page.classList.remove("reveal");
+        page.classList.add("hide");
+        menuPage.classList.remove("hide");
+        menuPage.classList.add("reveal");
+    })
 }

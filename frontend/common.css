@@ -72,9 +72,9 @@ main {
     line-height: 1.5;
 }
 
-.navigationButtons {
+.navigationButton {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
 }
 
 #revealMyPage {

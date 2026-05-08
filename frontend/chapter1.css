@@ -43,7 +43,7 @@
     margin-top: 20px;
 }
 
-#firstChapterButton {
+.navigationButton {
     display: flex;
     justify-content: right;
 }

@@ -268,20 +268,15 @@ closeletter1.addEventListener("click", function () {
 
 
 
-// Gå fram eller bak mellan sidorna
-
-
-document.querySelectorAll(".backButton").forEach(btn => {
-    btn.addEventListener("click", () => {
-        goBackAPage();
-    })
-})
+// Gå tillbaka till menyn efter ett kapitel
 
 document.querySelectorAll(".nextButton").forEach(btn => {
     btn.addEventListener("click", () => {
-        goForthAPage();
+        backToMenu();
     })
 })
+
+// Fortsätter till meny sidan efter sms sidan
 
 const continueButton = document.querySelector("#continueButton");
 const menuPage = document.querySelector("#menuPage");
@@ -289,4 +284,14 @@ continueButton.addEventListener("click", () => {
     menuPage.classList.remove("hide");
     menuPage.classList.add("reveal");
     messagePage.classList.add("hide");
+})
+
+// Öppnar rätt kapitel beroende på vilket kapitel man klickar in sig på i menyn
+
+document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("chapterButton")) {
+        const pageIndex = Number(event.target.dataset.page);
+        showPage(pageIndex);
+        menuPage.classList.add("hide");
+    }
 })
