@@ -71,6 +71,12 @@ main {
     margin: 0;
 }
 
+.titleAndVoiceover {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .breadText {
     font-size: 16px;
     font-family: SpaceGrotesk;

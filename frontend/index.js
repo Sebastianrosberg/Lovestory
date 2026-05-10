@@ -287,7 +287,7 @@ continueButton.addEventListener("click", () => {
 })
 
 // Öppnar rätt kapitel beroende på vilket kapitel man klickar in sig på i menyn
-
+/*
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("chapterButton")) {
         // if (visitedTargets[])
@@ -298,4 +298,20 @@ document.addEventListener("click", (event) => {
         showDateTransition(date, pageIndex);
         menuPage.classList.add("hide");
     }
+})
+*/
+// Startar röstljudet för kapitlarna
+
+document.querySelectorAll(".playChapter").forEach(button => {
+    button.addEventListener("click", () => {
+        const audio = button.parentElement.querySelector("audio");
+        
+        if (audio.paused) {
+            audio.play();
+            button.textContent = "⏸";
+        } else {
+            audio.pause();
+            button.textContent = "▶";
+        }
+    })
 })

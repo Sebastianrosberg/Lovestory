@@ -38,12 +38,22 @@ function goForthAPage() {
 */
 
 function backToMenu() {
+    document.querySelectorAll("audio").forEach(audio => {
+        audio.pause();
+        audio.currentTime = 0;
+    })
+
+    document.querySelectorAll(".playChapter").forEach(button => {
+        button.textContent = "▶";
+    })
+
     allPages.forEach(page => {
         page.classList.remove("reveal");
         page.classList.add("hide");
-        menuPage.classList.remove("hide");
-        menuPage.classList.add("reveal");
     })
+
+    menuPage.classList.remove("hide");
+    menuPage.classList.add("reveal");
 }
 
 const transitionPage = document.querySelector("#chapterTransition");
