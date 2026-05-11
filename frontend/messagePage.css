@@ -10,11 +10,13 @@
     display: block;
     width: 100px;
     height: 100px;
+    border-radius: 50%;
 }
 
 #messagePage h1 {
     text-align: center;
     margin-top: 0px;
+    font-family: spaceGrotesk;
 }
 
 #messagePage h2 {
