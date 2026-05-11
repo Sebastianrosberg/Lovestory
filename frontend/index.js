@@ -94,8 +94,8 @@ startPageSmsConversation.addEventListener("click", () => {
 
 let RADIUS = 50;
 let TargetLocations = {
-    chap1: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
-    // chap1: { latitude: 55.60883741458661, longitude: 12.994182711582665 },
+    // chap1: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
+    chap1: { latitude: 55.60883741458661, longitude: 12.994182711582665 },
     chap1loc2: { latitude: 55.60186430935728, longitude: 12.9888972842864 },
     chap2: { latitude: 55.610959077289216, longitude: 12.982203891552459 },
     chap3: { latitude: 55.61964569300686, longitude: 12.978360885921994 },
@@ -263,15 +263,15 @@ document.addEventListener("click", (event) => {
     if (event.target.classList.contains("chapterButton")) {
         const chapterName = event.target.dataset.chapter;
         
-        if (visitedTargets[chapterName].visited == true) {
-            if (visitedTargets[chapterName] == "chap1") {
+        if (visitedTargets[chapterName] == true) {
+            console.log(visitedTargets)
+            if ((visitedTargets[chapterName] == "chap2" && visitedTargets["chap1"].visited == true))   {
+                const pageIndex = Number(event.target.dataset.page);
+                const date = event.target.dataset.date;
 
-            }
-            const pageIndex = Number(event.target.dataset.page);
-            const date = event.target.dataset.date;
-
-            showDateTransition(date, pageIndex);
-            menuPage.classList.add("hide");
+                showDateTransition(date, pageIndex);
+                menuPage.classList.add("hide");
+            }    
         } 
     }
 })
