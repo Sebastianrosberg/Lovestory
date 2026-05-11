@@ -288,6 +288,18 @@ closeletter1.addEventListener("click", function () {
 document.getElementById("getLetterButton1").addEventListener("click", () => {
     document.getElementById("getLetterButton1").textContent = letterBits[0];
 })
+//Chapter 8
+document.getElementById("getLetterButton2").addEventListener("click", () => {
+    document.getElementById("getLetterButton2").textContent = letterBits[1];
+})
+//Chapter 9
+document.getElementById("getLetterButton3").addEventListener("click", () => {
+    document.getElementById("getLetterButton3").textContent = letterBits[2];
+})
+//Chapter 10
+document.getElementById("getLetterButton4").addEventListener("click", () => {
+    document.getElementById("getLetterButton4").textContent = letterBits[3];
+})
 
 
 // Gå tillbaka till menyn efter ett kapitel
