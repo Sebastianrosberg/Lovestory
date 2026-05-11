@@ -322,7 +322,7 @@ document.getElementById("getLetterButton3").addEventListener("click", () => {
 })
 //Chapter 10
 document.getElementById("getLetterButton4").addEventListener("click", () => {
-    document.getElementById("getLetterButton4").textContent = letterBits[3];
+    document.getElementById("fullLetterText").textContent = letterBits.join("\n\n");
 })
 
 
