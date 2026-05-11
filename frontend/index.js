@@ -311,18 +311,57 @@ closeletter1.addEventListener("click", function () {
 //Chapter 5
 document.getElementById("getLetterButton1").addEventListener("click", () => {
     document.getElementById("getLetterButton1").textContent = letterBits[0];
+    setTimeout(() => {
+        document.getElementById("letterSound1").play();
+    }, 3000)
 })
 //Chapter 8
 document.getElementById("getLetterButton2").addEventListener("click", () => {
     document.getElementById("getLetterButton2").textContent = letterBits[1];
+    setTimeout(() => {
+        document.getElementById("letterSound2").play();
+    }, 3000)
+    setTimeout(() => {
+        document.getElementById("letterSound3").play();
+    }, 9000)
 })
 //Chapter 9
 document.getElementById("getLetterButton3").addEventListener("click", () => {
     document.getElementById("getLetterButton3").textContent = letterBits[2];
+    setTimeout(() => {
+        document.getElementById("letterSound4").play();
+    }, 3000)
+    setTimeout(() => {
+        document.getElementById("letterSound5").play();
+    }, 6000)
+    setTimeout(() => {
+        document.getElementById("letterSound6").play();
+    }, 13000)
 })
 //Chapter 10
 document.getElementById("getLetterButton4").addEventListener("click", () => {
     document.getElementById("fullLetterText").textContent = letterBits.join("\n\n");
+    setTimeout(() => {
+        document.getElementById("letterSound7").play();
+    }, 3000)
+    setTimeout(() => {
+        document.getElementById("letterSound8").play();
+    }, 14000)
+    setTimeout(() => {
+        document.getElementById("letterSound9").play();
+    }, 19000)
+    setTimeout(() => {
+        document.getElementById("letterSound10").play();
+    }, 26000)
+    setTimeout(() => {
+        document.getElementById("letterSound11").play();
+    }, 29000)
+    setTimeout(() => {
+        document.getElementById("letterSound12").play();
+    }, 34000)
+    setTimeout(() => {
+        document.getElementById("letterSound13").play();
+    }, 41000)
 })
 
 
