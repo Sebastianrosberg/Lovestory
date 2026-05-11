@@ -97,18 +97,17 @@ continueGame.addEventListener("click", () => {
 })
 
 visitedTargets = {
-    chap1: { visited: false, pageNumber: 1, unlocks: "chap1loc2", open: true },
-    chap1loc2: { visited: false, pageNumber: 2, unlocks: "chap2", open: false },
-    chap2: { visited: false, pageNumber: 3, unlocks: "chap3", open: false },
-    chap3: { visited: false, pageNumber: 4, unlocks: "chap4", open: false },
-    chap4: { visited: false, pageNumber: 5, unlocks: "chap5", open: false },
-    chap5: { visited: false, pageNumber: 6, unlocks: "chap6", open: false },
-    chap6: { visited: false, pageNumber: 7, unlocks: "chap7", open: false },
-    chap7: { visited: false, pageNumber: 8, unlocks: "chap8", open: false },
-    chap8: { visited: false, pageNumber: 9, unlocks: "chap9", open: false },
-    chap9: { visited: false, pageNumber: 10, unlocks: "chap10", open: false },
-    chap10: { visited: false, pageNumber: 11, unlocks: "chap11", open: false },
-    chap11: { visited: false, pageNumber: 12, unlocks: "", open: false }
+    chap1: { visited: false, pageNumber: 1, unlocks: "chap2", open: true },
+    chap2: { visited: false, pageNumber: 2, unlocks: "chap3", open: false },
+    chap3: { visited: false, pageNumber: 3, unlocks: "chap4", open: false },
+    chap4: { visited: false, pageNumber: 4, unlocks: "chap5", open: false },
+    chap5: { visited: false, pageNumber: 5, unlocks: "chap6", open: false },
+    chap6: { visited: false, pageNumber: 6, unlocks: "chap7", open: false },
+    chap7: { visited: false, pageNumber: 7, unlocks: "chap8", open: false },
+    chap8: { visited: false, pageNumber: 8, unlocks: "chap9", open: false },
+    chap9: { visited: false, pageNumber: 9, unlocks: "chap10", open: false },
+    chap10: { visited: false, pageNumber: 10, unlocks: "chap11", open: false },
+    chap11: { visited: false, pageNumber: 11, unlocks: "", open: false }
 }
 
 // Start Page Listeneres
@@ -180,8 +179,8 @@ startPageSmsConversation.addEventListener("click", () => {
 
 let RADIUS = 50;
 let TargetLocations = {
-    // chap1: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
-    chap1: { latitude: 55.60883741458661, longitude: 12.994182711582665 },
+    chap1: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
+    // chap1: { latitude: 55.60883741458661, longitude: 12.994182711582665 },
     chap2: { latitude: 55.610959077289216, longitude: 12.982203891552459 },
     chap3: { latitude: 55.61964569300686, longitude: 12.978360885921994 },
     chap4: { latitude: 55.60883601160361, longitude: 12.994571284715402 },

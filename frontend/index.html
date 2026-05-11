@@ -23,7 +23,7 @@
 
     <main>
 
-        <div id="intro" class="container hide">
+        <div id="intro" class="container reveal">
             <div id="startGameContainer">
                 <button class="startButtons" id="newGame">Start New Game</button>
                 <button class="startButtons" id="continueGame">Continue story</button>
@@ -509,7 +509,7 @@
             <p class="nextPlaceClue">Valentinas lägenhet</p>
         </div>
 
-        <div class="container " id="chapter10">
+        <div class="container hide" id="chapter10">
             <h4 class="currentChapter chapterOf">10 av 11</h4>
             <div class="titleAndVoiceover">
                 <h1 class="chapterTitle">Sanningen</h1>
@@ -576,10 +576,52 @@
             </p>
             <p class="breadText">Love försöker ringa henne en sista gång innan relationen tar slut, men får inget svar.
             </p>
-            <div class="navigationButton">
-                <button class="nextButton">Nästa</button>
+            
+            <h2>Ska de vara kvar tillsammans efter detta eller inte?</h2>
+            <div>
+                <button id="yesButton">Ja</button>
+                <button id="noButton">Nej</button>
             </div>
+        </div>
 
+        <div class="container hide" id="yesAnswer"> 
+            <p class="breadText"><i>De valde inte varandra för att allt hade blivit helt igen.<br>
+            De valde varandra trots sprickorna och brustna hjärtan. <br><br>
+            Vissa kvällar gjorde det fortfarande ont att minnas, och vissa ord gick aldrig riktigt att glömma. Men mellan tågresor, sena samtal och försiktiga sorgsna hjärtan som sakta hittade tillbaka till varandra, började något nytt att växa fram, en kärlek på nytt. <br><br>
+            Inte samma kärlek som förr — utan en ärligare version av den. <br><br>
+            Och någonstans mellan Malmö och Köpenhamn lärde de sig att vissa människor fortsätter leva med varandra för evigt, även efter att allt nästan tagit slut.
+            </i></p>
+        </div>
+        
+        <div class="container hide" id="noAnswer">
+            <p class="breadText">Valentina</p> 
+            <i>
+            <p class="breadText">Hon svarade aldrig på det sista samtalet.<br><br>
+
+            Med tiden slutade hon vänta på hans namn i telefonen och lärde sig istället att fylla tystnaden med sig själv. Pianot blev det enda som fortfarande kunde säga det hon inte längre orkade känna högt. <br><br>
+
+            Ibland tänkte hon tillbaka på Slottsparken, på drömmen de ritade upp tillsammans som om framtiden redan tillhörde dem. <br><br>
+
+            Men vissa människor är inte menade att stanna för alltid.
+            Vissa finns bara kvar som ekon — som en låt man aldrig riktigt lyckas glömma.
+            Det är en läxa som hon tar med sig hela livet. <br><br>
+            </i>
+            </p>
+            <p class="breadText">Love</p> 
+            <i>
+            <p class="breadText">
+            Han fick aldrig något svar när han ringde den sista gången.
+
+            Efter det blev Malmö bara ännu en stad fylld av tomma rum och sena tågresor hem till Köpenhamn i mörkret. Han försökte begrava sig i skisser, föreläsningar och framtidsplaner, men varje ritning tycktes ändå bära spår av henne. <br><br>
+
+            Ibland kunde en melodi från ett öppet fönster få honom att stanna upp mitt på gatan. Som om hennes piano fortfarande jagade honom genom staden. <br><br>
+
+            Han förstod till slut att vissa misstag inte förstör kärleken direkt — de tar bara långsamt sönder den tills det inte finns något kvar att rädda. <br><br>
+
+            Och kvar fanns bara minnet av någon han älskade för sent och för fegt.
+            Ett misstag som är med honom resten av hans liv. <br><br>
+            </i>
+            </p>
         </div>
 
         <div class="hide" id="chapterTransition">
