@@ -2,11 +2,80 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 200px;
 }
 
 #startGameContainer{
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
 
+.startButtons {
+    padding: 30px;
+    font-family: spaceGrotesk;
+    border-radius: 20px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px;
+}
 
+#continueGame {
+    background-image: url("../images/Cover_Page_Edit.jpg");
+    background-position: bottom;
+}
 
+#newGame {
+    background-image: url("../images/Cover_Page_Edit.jpg");
+    background-position: right;
+}
+
+#popupStartGame {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    width: 300px;
+    border: 1px solid black;
+    transform: translate(-50%, 0);
+    background-color: white;
+
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+#popupStartGame h2 {
+    margin: 0;
+}
+
+.popupButton {
+    padding: 10px;
+    font-family: spaceGrotesk;
+    width: 130px;
+    font-size: 15px;
+    font-weight: 600;
+
+    color: white;
+    border: 1px solid gray;
+
+}
+
+#popupButtonContainer {
+    display: flex;
+    flex: 1;
+    gap: 20px;
+}
+
+#popupYes {
+    background-color: rgb(77, 141, 83);
+    border-radius: 5px;
+}
+
+#popupNo {
+    background-color: rgb(199, 51, 51);
+    border-radius: 5px;
+}
+
+.popupButton:hover {
+    opacity: 0.5;
+}

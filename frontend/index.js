@@ -13,10 +13,13 @@ let chapter7Page = document.querySelector("#chapter7");
 let chapter8Page = document.querySelector("#chapter8");
 let chapter9Page = document.querySelector("#chapter9");
 let chapter10Page = document.querySelector("#chapter10");
-let smsSignal = document.querySelector("#smsSignal")
+let smsSignal = document.querySelector("#smsSignal");
 
 let newGame = document.querySelector("#newGame")
 let continueGame = document.querySelector("#continueGame")
+let popupNo = document.querySelector("#popupNo")
+let popupYes = document.querySelector("#popupYes")
+let popupStartGame = document.querySelector("#popupStartGame")
 
 let allPages = [introPage, startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page];
 
@@ -39,6 +42,14 @@ let letterBits = [
 let visitedTarget;
 
 newGame.addEventListener("click", () => {
+    popupStartGame.classList.add("reveal")
+    popupStartGame.classList.remove("hide")
+
+    newGame.classList.add("hide")
+    continueGame.classList.add("hide")
+})
+
+popupYes.addEventListener("click", () => {
     window.localStorage.removeItem("visitedTargets");
     console.log(("emptied local storage"));
 
@@ -63,12 +74,20 @@ newGame.addEventListener("click", () => {
     }
 })
 
+popupNo.addEventListener("click", () => {
+    popupStartGame.classList.remove("reveal")
+    popupStartGame.classList.add("hide")
+
+    newGame.classList.remove("hide")
+    continueGame.classList.remove("hide")
+})
+
 continueGame.addEventListener("click", () => {
     introPage.classList.remove("reveal")
     introPage.classList.add("hide")
 
-    startPage.classList.add("reveal")
-    startPage.classList.remove("hide")
+    menuPage.classList.add("reveal")
+    menuPage.classList.remove("hide")
 
 })
 
