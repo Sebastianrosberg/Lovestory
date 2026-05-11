@@ -25,8 +25,17 @@
 
         <div id="intro" class="container reveal">
             <div id="startGameContainer">
-                <button id="newGame">Start New Game</button>
-                <button id="continueGame">Continue story</button>
+                <button class="startButtons" id="newGame">Start New Game</button>
+                <button class="startButtons" id="continueGame">Continue story</button>
+            </div>
+        </div>
+
+        <div id="popupStartGame" class="hide">
+            <h2>Are you sure?</h2>
+            <p>Are you sure you want to start a new game? You will have too walk to each location again.</p>
+            <div id="popupButtonContainer">
+                <button class="popupButton" id="popupNo">Close</button>
+                <button class="popupButton" id="popupYes">Yes, proceed</button>
             </div>
         </div>
 
