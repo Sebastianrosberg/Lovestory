@@ -54,7 +54,7 @@ newGame.addEventListener("click", () => {
     chap9: { visited: false, pageNumber: 9, unlocks: "chap10", open: false },
     chap10: { visited: false, pageNumber: 10, unlocks: "chap11", open: false },
     chap11: { visited: false, pageNumber: 11, unlocks: "", open: false }
-}
+    }
 })
 
 continueGame.addEventListener("click", () => {
