@@ -95,6 +95,7 @@ startPageSmsConversation.addEventListener("click", () => {
 let RADIUS = 50;
 let TargetLocations = {
     chap1: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
+    // chap1: { latitude: 55.60883741458661, longitude: 12.994182711582665 },
     chap1loc2: { latitude: 55.60186430935728, longitude: 12.9888972842864 },
     chap2: { latitude: 55.610959077289216, longitude: 12.982203891552459 },
     chap3: { latitude: 55.61964569300686, longitude: 12.978360885921994 },
@@ -239,35 +240,6 @@ closeletter1.addEventListener("click", function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Gå tillbaka till menyn efter ett kapitel
 
 document.querySelectorAll(".nextButton").forEach(btn => {
@@ -293,6 +265,8 @@ document.addEventListener("click", (event) => {
         const chapterName = event.target.dataset.chapter;
         
         if (visitedTargets[chapterName] == true) {
+            console.log(visitedTargets)
+            if (visitedTargets[chapterName])
             const pageIndex = Number(event.target.dataset.page);
             const date = event.target.dataset.date;
 
