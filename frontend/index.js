@@ -265,13 +265,11 @@ document.addEventListener("click", (event) => {
         
         if (visitedTargets[chapterName] == true) {
             console.log(visitedTargets)
-            if ((visitedTargets[chapterName] == "chap2" && visitedTargets["chap1"].visited == true))   {
-                const pageIndex = Number(event.target.dataset.page);
-                const date = event.target.dataset.date;
+            const pageIndex = Number(event.target.dataset.page);
+            const date = event.target.dataset.date;
 
-                showDateTransition(date, pageIndex);
-                menuPage.classList.add("hide");
-            }    
+            showDateTransition(date, pageIndex);
+            menuPage.classList.add("hide");   
         } 
     }
 })
