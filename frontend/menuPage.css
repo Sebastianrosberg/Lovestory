@@ -3,3 +3,7 @@
     flex-direction: column;
     gap: 10px;
 }
+
+#menuPage h1 {
+    text-align: center;
+}
