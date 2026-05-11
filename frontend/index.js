@@ -13,12 +13,13 @@ let chapter7Page = document.querySelector("#chapter7");
 let chapter8Page = document.querySelector("#chapter8");
 let chapter9Page = document.querySelector("#chapter9");
 let chapter10Page = document.querySelector("#chapter10");
+let chapter11Page = document.querySelector("#chapter11");
 let smsSignal = document.querySelector("#smsSignal")
 
 let newGame = document.querySelector("#newGame")
 let continueGame = document.querySelector("#continueGame")
 
-let allPages = [introPage, startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page];
+let allPages = [introPage, startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page, chapter11Page];
 
 let humanButton = document.querySelector("#humanButton");
 let circle1 = document.querySelector("#circle1");
