@@ -287,19 +287,21 @@ continueButton.addEventListener("click", () => {
 })
 
 // Öppnar rätt kapitel beroende på vilket kapitel man klickar in sig på i menyn
-/*
+
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("chapterButton")) {
-        // if (visitedTargets[])
+        const chapterName = event.target.dataset.chapter;
+        
+        if (visitedTargets[chapterName] == true) {
+            const pageIndex = Number(event.target.dataset.page);
+            const date = event.target.dataset.date;
 
-        const pageIndex = Number(event.target.dataset.page);
-        const date = event.target.dataset.date;
-
-        showDateTransition(date, pageIndex);
-        menuPage.classList.add("hide");
+            showDateTransition(date, pageIndex);
+            menuPage.classList.add("hide");
+        } 
     }
 })
-*/
+
 // Startar röstljudet för kapitlarna
 
 document.querySelectorAll(".playChapter").forEach(button => {
