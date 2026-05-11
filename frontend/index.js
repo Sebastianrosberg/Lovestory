@@ -1,7 +1,8 @@
-
+window.localStorage.removeItem("visitedTargets");
 let startPage = document.querySelector("#startPage");
 let messagePage = document.querySelector("#messagePage")
 let chapter1Page = document.querySelector("#chapter1");
+let chapter1loc2 = document.querySelector("#chapter1loc2")
 let chapter2Page = document.querySelector("#chapter2");
 let chapter3Page = document.querySelector("#chapter3");
 let chapter4Page = document.querySelector("#chapter4");
@@ -11,10 +12,9 @@ let chapter7Page = document.querySelector("#chapter7");
 let chapter8Page = document.querySelector("#chapter8");
 let chapter9Page = document.querySelector("#chapter9");
 let chapter10Page = document.querySelector("#chapter10");
-let geoLocCircle = document.querySelector("#geoLocationCircle");
 let smsSignal = document.querySelector("#smsSignal")
 
-let allPages = [startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page];
+let allPages = [startPage, messagePage, chapter1Page, chapter1loc2, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page];
 
 let humanButton = document.querySelector("#humanButton");
 let circle1 = document.querySelector("#circle1");
@@ -96,7 +96,8 @@ let RADIUS = 50;
 let TargetLocations = {
     // chap1: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
     chap1: { latitude: 55.60883741458661, longitude: 12.994182711582665 },
-    chap1loc2: { latitude: 55.60186430935728, longitude: 12.9888972842864 },
+    chap1loc2: { latitude: 55.60883741458661, longitude: 12.994182711582665 },
+    // chap1loc2: { latitude: 55.60186430935728, longitude: 12.9888972842864 },
     chap2: { latitude: 55.610959077289216, longitude: 12.982203891552459 },
     chap3: { latitude: 55.61964569300686, longitude: 12.978360885921994 },
     chap4: { latitude: 55.60883601160361, longitude: 12.994571284715402 },
@@ -111,23 +112,23 @@ let TargetLocations = {
 
 // User store if they've been at a target or not
 let visitedTargets = {
-    chap1: { visited: false, pageNumber: 1 },
-    chap1loc2: { visited: false, pageNumber: 2 },
-    chap2: { visited: false, pageNumber: 3 },
-    chap3: { visited: false, pageNumber: 4 },
-    chap4: { visited: false, pageNumber: 5 },
-    chap5: { visited: false, pageNumber: 6 },
-    chap6: { visited: false, pageNumber: 7 },
-    chap7: { visited: false, pageNumber: 8 },
-    chap8: { visited: false, pageNumber: 9 },
-    chap9: { visited: false, pageNumber: 10 },
-    chap10: { visited: false, pageNumber: 11 },
-    chap11: { visited: false, pageNumber: 12 }
+    chap1: { visited: false, pageNumber: 1, unlocks: "chap1loc2", open: true },
+    chap1loc2: { visited: false, pageNumber: 2, unlocks: "chap2", open: false  },
+    chap2: { visited: false, pageNumber: 3, unlocks: "chap3", open: false },
+    chap3: { visited: false, pageNumber: 4, unlocks: "chap4", open: false },
+    chap4: { visited: false, pageNumber: 5, unlocks: "chap5", open: false },
+    chap5: { visited: false, pageNumber: 6, unlocks: "chap6", open: false },
+    chap6: { visited: false, pageNumber: 7, unlocks: "chap7", open: false },
+    chap7: { visited: false, pageNumber: 8, unlocks: "chap8", open: false },
+    chap8: { visited: false, pageNumber: 9, unlocks: "chap9", open: false },
+    chap9: { visited: false, pageNumber: 10, unlocks: "chap10", open: false },
+    chap10: { visited: false, pageNumber: 11, unlocks: "chap11", open: false },
+    chap11: { visited: false, pageNumber: 12, unlocks: "", open: false }
 }
 
 // check if something was stored in local storage (ie. the cache)
 if (window.localStorage.getItem("visitedTargets")) {
-    visitedTargets = JSON.parse(window.localStorage.getItem("visitedTargets"));
+    visitedTargets = JSON.parse(window.localStorage.getItem("visitedTargets"));;
 }
 
 
@@ -144,13 +145,16 @@ navigator.geolocation.watchPosition((position) => {
             let isAtChapter = isWithinDistance(userLat, userLng, chapter.latitude, chapter.longitude);
             console.log(chapterName, "isAtChapter:", isAtChapter);
 
-            if (isAtChapter) {
+            if (isAtChapter && visitedTargets[chapterName].open == true) {
                 visitedTargets[chapterName].visited = true;
-
+   
                 window.localStorage.setItem("visitedTargets", JSON.stringify(visitedTargets));
                 if (chapterName == "chap1") {
                     let chap1Span = document.querySelector("#chap1Span");
                     chap1Span.textContent = "🔓";
+                } else if (chapterName == "chap1loc2") {
+                    let chap1loc2Span = document.querySelector("#chap1loc2Span");
+                    chap1loc2Span.textContent = "🔓";
                 } else if (chapterName == "chap2") {
                     let chap2Span = document.querySelector("#chap2Span");
                     chap2Span.textContent = "🔓"
@@ -200,7 +204,6 @@ function getDistanceM(lat1, lng1, lat2, lng2) {
 function isWithinDistance(userLat, userLng, targetLat, targetLng) {
     let distance = getDistanceM(userLat, userLng, targetLat, targetLng);
     if (distance <= RADIUS) {
-        // geoLocCircle.style.backgroundColor = "green"
         return true;
     }
     return false;
@@ -262,16 +265,20 @@ continueButton.addEventListener("click", () => {
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("chapterButton")) {
         const chapterName = event.target.dataset.chapter;
-        
-        if (visitedTargets[chapterName] == true) {
-            console.log(visitedTargets)
-            if ((visitedTargets[chapterName] == "chap2" && visitedTargets["chap1"].visited == true))   {
-                const pageIndex = Number(event.target.dataset.page);
-                const date = event.target.dataset.date;
+        console.log(visitedTargets[chapterName].visited);
+        console.log(visitedTargets[chapterName].open);
+        if (visitedTargets[chapterName].visited == true && visitedTargets[chapterName].open == true) {
+            let unlockedPlace = visitedTargets[chapterName].unlocks
+            console.log(visitedTargets, visitedTargets[chapterName].open)
+            
+            visitedTargets[unlockedPlace].open = true
 
-                showDateTransition(date, pageIndex);
-                menuPage.classList.add("hide");
-            }    
+            const pageIndex = Number(event.target.dataset.page);
+            const date = event.target.dataset.date;
+
+            showDateTransition(date, pageIndex);
+            menuPage.classList.add("hide");
+            
         } 
     }
 })
