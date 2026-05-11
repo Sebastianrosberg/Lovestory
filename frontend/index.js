@@ -111,7 +111,7 @@ let TargetLocations = {
 
 // User store if they've been at a target or not
 let visitedTargets = {
-    chap1: false,
+    chap1: { visited: false, pageNumber: 1 },
     chap1loc2: false,
     chap2: false,
     chap3: false,
@@ -266,7 +266,9 @@ document.addEventListener("click", (event) => {
         
         if (visitedTargets[chapterName] == true) {
             console.log(visitedTargets)
-            if (visitedTargets[chapterName])
+            if (visitedTargets[chapterName] == "chap1") {
+
+            }
             const pageIndex = Number(event.target.dataset.page);
             const date = event.target.dataset.date;
 
