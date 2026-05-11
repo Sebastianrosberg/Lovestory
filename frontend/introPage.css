@@ -1,0 +1,12 @@
+#intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#startGameContainer{
+    border: 1px solid black;
+}
+
+
+

@@ -1,4 +1,6 @@
-window.localStorage.removeItem("visitedTargets");
+
+
+let introPage = document.querySelector("#intro")
 let startPage = document.querySelector("#startPage");
 let messagePage = document.querySelector("#messagePage")
 let chapter1Page = document.querySelector("#chapter1");
@@ -14,7 +16,10 @@ let chapter9Page = document.querySelector("#chapter9");
 let chapter10Page = document.querySelector("#chapter10");
 let smsSignal = document.querySelector("#smsSignal")
 
-let allPages = [startPage, messagePage, chapter1Page, chapter1loc2, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page];
+let newGame = document.querySelector("#newGame")
+let continueGame = document.querySelector("#continueGame")
+
+let allPages = [introPage, startPage, messagePage, chapter1Page, chapter1loc2, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page];
 
 let humanButton = document.querySelector("#humanButton");
 let circle1 = document.querySelector("#circle1");
@@ -24,6 +29,59 @@ let loadingSms = document.querySelector("#loadingSms")
 let startPageSmsConversation = document.querySelector("#startPageSmsConversation")
 let loadingSmsP = document.querySelector("#loadingSmsP")
 let phoneRevealTimeout;
+
+// Start Game
+let visitedTarget;
+
+newGame.addEventListener("click", () => {
+    window.localStorage.removeItem("visitedTargets");
+    console.log(("emptied local storage"));
+    
+    introPage.classList.remove("reveal")
+    introPage.classList.add("hide")
+
+    startPage.classList.add("reveal")
+    startPage.classList.remove("hide")
+
+    visitedTargets = {
+    chap1: { visited: false, pageNumber: 1, unlocks: "chap1loc2", open: true },
+    chap1loc2: { visited: false, pageNumber: 2, unlocks: "chap2", open: false  },
+    chap2: { visited: false, pageNumber: 3, unlocks: "chap3", open: false },
+    chap3: { visited: false, pageNumber: 4, unlocks: "chap4", open: false },
+    chap4: { visited: false, pageNumber: 5, unlocks: "chap5", open: false },
+    chap5: { visited: false, pageNumber: 6, unlocks: "chap6", open: false },
+    chap6: { visited: false, pageNumber: 7, unlocks: "chap7", open: false },
+    chap7: { visited: false, pageNumber: 8, unlocks: "chap8", open: false },
+    chap8: { visited: false, pageNumber: 9, unlocks: "chap9", open: false },
+    chap9: { visited: false, pageNumber: 10, unlocks: "chap10", open: false },
+    chap10: { visited: false, pageNumber: 11, unlocks: "chap11", open: false },
+    chap11: { visited: false, pageNumber: 12, unlocks: "", open: false }
+}
+})
+
+continueGame.addEventListener("click", () => {
+    introPage.classList.remove("reveal")
+    introPage.classList.add("hide")
+
+    startPage.classList.add("reveal")
+    startPage.classList.remove("hide")
+
+})
+
+visitedTargets = {
+    chap1: { visited: false, pageNumber: 1, unlocks: "chap1loc2", open: true },
+    chap1loc2: { visited: false, pageNumber: 2, unlocks: "chap2", open: false  },
+    chap2: { visited: false, pageNumber: 3, unlocks: "chap3", open: false },
+    chap3: { visited: false, pageNumber: 4, unlocks: "chap4", open: false },
+    chap4: { visited: false, pageNumber: 5, unlocks: "chap5", open: false },
+    chap5: { visited: false, pageNumber: 6, unlocks: "chap6", open: false },
+    chap6: { visited: false, pageNumber: 7, unlocks: "chap7", open: false },
+    chap7: { visited: false, pageNumber: 8, unlocks: "chap8", open: false },
+    chap8: { visited: false, pageNumber: 9, unlocks: "chap9", open: false },
+    chap9: { visited: false, pageNumber: 10, unlocks: "chap10", open: false },
+    chap10: { visited: false, pageNumber: 11, unlocks: "chap11", open: false },
+    chap11: { visited: false, pageNumber: 12, unlocks: "", open: false }
+}
 
 // Start Page Listeneres
 
@@ -110,21 +168,6 @@ let TargetLocations = {
     chap11: { latitude: 55.59728614848932, longitude: 12.990082184069786 }
 }
 
-// User store if they've been at a target or not
-let visitedTargets = {
-    chap1: { visited: false, pageNumber: 1, unlocks: "chap1loc2", open: true },
-    chap1loc2: { visited: false, pageNumber: 2, unlocks: "chap2", open: false  },
-    chap2: { visited: false, pageNumber: 3, unlocks: "chap3", open: false },
-    chap3: { visited: false, pageNumber: 4, unlocks: "chap4", open: false },
-    chap4: { visited: false, pageNumber: 5, unlocks: "chap5", open: false },
-    chap5: { visited: false, pageNumber: 6, unlocks: "chap6", open: false },
-    chap6: { visited: false, pageNumber: 7, unlocks: "chap7", open: false },
-    chap7: { visited: false, pageNumber: 8, unlocks: "chap8", open: false },
-    chap8: { visited: false, pageNumber: 9, unlocks: "chap9", open: false },
-    chap9: { visited: false, pageNumber: 10, unlocks: "chap10", open: false },
-    chap10: { visited: false, pageNumber: 11, unlocks: "chap11", open: false },
-    chap11: { visited: false, pageNumber: 12, unlocks: "", open: false }
-}
 
 // check if something was stored in local storage (ie. the cache)
 if (window.localStorage.getItem("visitedTargets")) {
