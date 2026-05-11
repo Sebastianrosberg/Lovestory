@@ -53,11 +53,15 @@ popupYes.addEventListener("click", () => {
     window.localStorage.removeItem("visitedTargets");
     console.log(("emptied local storage"));
 
+    popupStartGame.classList.remove("reveal")
+    popupStartGame.classList.add("hide")
+
     introPage.classList.remove("reveal")
     introPage.classList.add("hide")
 
     startPage.classList.add("reveal")
     startPage.classList.remove("hide")
+
 
     visitedTargets = {
         chap1: { visited: false, pageNumber: 1, unlocks: "chap2", open: true },
