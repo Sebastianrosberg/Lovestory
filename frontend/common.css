@@ -118,3 +118,23 @@ main {
     font-size: 20px;
     font-style: italic;
 }
+
+.getLetterButton {
+    padding: 10px;
+    border-radius: 5px;
+    font-family: spaceGrotesk;
+    font-size: 14px;
+    background-color: white;
+    box-shadow: 1px 1px 1px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.nextButton {
+    padding: 5px;
+    border-radius: 5px;
+    font-family: spaceGrotesk;
+    font-size: 14px;
+    background-color: rgb(188, 188, 188);
+    box-shadow: 1px 1px 1px;
+}
