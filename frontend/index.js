@@ -112,17 +112,17 @@ let TargetLocations = {
 // User store if they've been at a target or not
 let visitedTargets = {
     chap1: { visited: false, pageNumber: 1 },
-    chap1loc2: false,
-    chap2: false,
-    chap3: false,
-    chap4: false,
-    chap5: false,
-    chap6: false,
-    chap7: false,
-    chap8: false,
-    chap9: false,
-    chap10: false,
-    chap11: false
+    chap1loc2: { visited: false, pageNumber: 2 },
+    chap2: { visited: false, pageNumber: 3 },
+    chap3: { visited: false, pageNumber: 4 },
+    chap4: { visited: false, pageNumber: 5 },
+    chap5: { visited: false, pageNumber: 6 },
+    chap6: { visited: false, pageNumber: 7 },
+    chap7: { visited: false, pageNumber: 8 },
+    chap8: { visited: false, pageNumber: 9 },
+    chap9: { visited: false, pageNumber: 10 },
+    chap10: { visited: false, pageNumber: 11 },
+    chap11: { visited: false, pageNumber: 12 }
 }
 
 // check if something was stored in local storage (ie. the cache)
@@ -139,19 +139,18 @@ navigator.geolocation.watchPosition((position) => {
     for (let chapterName in TargetLocations) {
         let chapter = TargetLocations[chapterName]; // dvs. { latitude ..., longitude ... }
         console.log("Kollar:", chapterName, "visited:", visitedTargets[chapterName]);
-
-        if (!visitedTargets[chapterName]) {
-
+        if (!visitedTargets[chapterName].visited) {
 
             let isAtChapter = isWithinDistance(userLat, userLng, chapter.latitude, chapter.longitude);
             console.log(chapterName, "isAtChapter:", isAtChapter);
+
             if (isAtChapter) {
-                visitedTargets[chapterName] = true;
+                visitedTargets[chapterName].visited = true;
+
                 window.localStorage.setItem("visitedTargets", JSON.stringify(visitedTargets));
                 if (chapterName == "chap1") {
                     let chap1Span = document.querySelector("#chap1Span");
                     chap1Span.textContent = "🔓";
-                    console.log("Funkar!");
                 } else if (chapterName == "chap2") {
                     let chap2Span = document.querySelector("#chap2Span");
                     chap2Span.textContent = "🔓"
@@ -264,8 +263,7 @@ document.addEventListener("click", (event) => {
     if (event.target.classList.contains("chapterButton")) {
         const chapterName = event.target.dataset.chapter;
         
-        if (visitedTargets[chapterName] == true) {
-            console.log(visitedTargets)
+        if (visitedTargets[chapterName].visited == true) {
             if (visitedTargets[chapterName] == "chap1") {
 
             }
