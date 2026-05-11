@@ -4,7 +4,6 @@ let introPage = document.querySelector("#intro")
 let startPage = document.querySelector("#startPage");
 let messagePage = document.querySelector("#messagePage")
 let chapter1Page = document.querySelector("#chapter1");
-let chapter1loc2 = document.querySelector("#chapter1loc2")
 let chapter2Page = document.querySelector("#chapter2");
 let chapter3Page = document.querySelector("#chapter3");
 let chapter4Page = document.querySelector("#chapter4");
@@ -19,7 +18,7 @@ let smsSignal = document.querySelector("#smsSignal")
 let newGame = document.querySelector("#newGame")
 let continueGame = document.querySelector("#continueGame")
 
-let allPages = [introPage, startPage, messagePage, chapter1Page, chapter1loc2, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page];
+let allPages = [introPage, startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page];
 
 let humanButton = document.querySelector("#humanButton");
 let circle1 = document.querySelector("#circle1");
