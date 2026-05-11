@@ -28,6 +28,12 @@ let loadingSms = document.querySelector("#loadingSms")
 let startPageSmsConversation = document.querySelector("#startPageSmsConversation")
 let loadingSmsP = document.querySelector("#loadingSmsP")
 let phoneRevealTimeout;
+let letterBits = [
+    "Nu sitter jag här i din soffa, medan du sover i rummet intill, och tystnaden i din nya lägenhet är så hög att jag inte kan hålla det inne längre.",
+    "Du förtjänar att veta varför jag har varit som en skugga av mig själv. Men det jag aldrig sa då, den där kvällen efter konserten när vi började prata igen, var att jag inte var ensam.",
+    "Jag hade ett liv i Köpenhamn. Vi hade ju inte sagt att vi var tillsammans igen, eller hur? Jag ville ha kvar oss så desperat att jag var beredd att bygga vår nya framtid på en lögn.",
+    "Förlåt för att jag inte var modig nog när det faktiskt betydde något.",
+];
 
 // Start Game
 let visitedTarget;
@@ -35,7 +41,7 @@ let visitedTarget;
 newGame.addEventListener("click", () => {
     window.localStorage.removeItem("visitedTargets");
     console.log(("emptied local storage"));
-    
+
     introPage.classList.remove("reveal")
     introPage.classList.add("hide")
 
@@ -43,17 +49,17 @@ newGame.addEventListener("click", () => {
     startPage.classList.remove("hide")
 
     visitedTargets = {
-    chap1: { visited: false, pageNumber: 1, unlocks: "chap2", open: true },
-    chap2: { visited: false, pageNumber: 2, unlocks: "chap3", open: false },
-    chap3: { visited: false, pageNumber: 3, unlocks: "chap4", open: false },
-    chap4: { visited: false, pageNumber: 4, unlocks: "chap5", open: false },
-    chap5: { visited: false, pageNumber: 5, unlocks: "chap6", open: false },
-    chap6: { visited: false, pageNumber: 6, unlocks: "chap7", open: false },
-    chap7: { visited: false, pageNumber: 7, unlocks: "chap8", open: false },
-    chap8: { visited: false, pageNumber: 8, unlocks: "chap9", open: false },
-    chap9: { visited: false, pageNumber: 9, unlocks: "chap10", open: false },
-    chap10: { visited: false, pageNumber: 10, unlocks: "chap11", open: false },
-    chap11: { visited: false, pageNumber: 11, unlocks: "", open: false }
+        chap1: { visited: false, pageNumber: 1, unlocks: "chap2", open: true },
+        chap2: { visited: false, pageNumber: 2, unlocks: "chap3", open: false },
+        chap3: { visited: false, pageNumber: 3, unlocks: "chap4", open: false },
+        chap4: { visited: false, pageNumber: 4, unlocks: "chap5", open: false },
+        chap5: { visited: false, pageNumber: 5, unlocks: "chap6", open: false },
+        chap6: { visited: false, pageNumber: 6, unlocks: "chap7", open: false },
+        chap7: { visited: false, pageNumber: 7, unlocks: "chap8", open: false },
+        chap8: { visited: false, pageNumber: 8, unlocks: "chap9", open: false },
+        chap9: { visited: false, pageNumber: 9, unlocks: "chap10", open: false },
+        chap10: { visited: false, pageNumber: 10, unlocks: "chap11", open: false },
+        chap11: { visited: false, pageNumber: 11, unlocks: "", open: false }
     }
 })
 
@@ -68,7 +74,7 @@ continueGame.addEventListener("click", () => {
 
 visitedTargets = {
     chap1: { visited: false, pageNumber: 1, unlocks: "chap1loc2", open: true },
-    chap1loc2: { visited: false, pageNumber: 2, unlocks: "chap2", open: false  },
+    chap1loc2: { visited: false, pageNumber: 2, unlocks: "chap2", open: false },
     chap2: { visited: false, pageNumber: 3, unlocks: "chap3", open: false },
     chap3: { visited: false, pageNumber: 4, unlocks: "chap4", open: false },
     chap4: { visited: false, pageNumber: 5, unlocks: "chap5", open: false },
@@ -186,7 +192,7 @@ navigator.geolocation.watchPosition((position) => {
 
             if (isAtChapter && visitedTargets[chapterName].open == true) {
                 visitedTargets[chapterName].visited = true;
-   
+
                 window.localStorage.setItem("visitedTargets", JSON.stringify(visitedTargets));
                 if (chapterName == "chap1") {
                     let chap1Span = document.querySelector("#chap1Span");
@@ -278,7 +284,10 @@ closeletter1.addEventListener("click", function () {
 
 //menuPage
 
-
+//Chapter 5
+document.getElementById("getLetterButton1").addEventListener("click", () => {
+    document.getElementById("getLetterButton1").textContent = letterBits[0];
+})
 
 
 // Gå tillbaka till menyn efter ett kapitel
@@ -309,7 +318,7 @@ document.addEventListener("click", (event) => {
         if (visitedTargets[chapterName].visited == true && visitedTargets[chapterName].open == true) {
             let unlockedPlace = visitedTargets[chapterName].unlocks
             console.log(visitedTargets, visitedTargets[chapterName].open)
-            
+
             visitedTargets[unlockedPlace].open = true
 
             const pageIndex = Number(event.target.dataset.page);
@@ -317,8 +326,8 @@ document.addEventListener("click", (event) => {
 
             showDateTransition(date, pageIndex);
             menuPage.classList.add("hide");
-            
-        } 
+
+        }
     }
 })
 
@@ -327,7 +336,7 @@ document.addEventListener("click", (event) => {
 document.querySelectorAll(".playChapter").forEach(button => {
     button.addEventListener("click", () => {
         const audio = button.parentElement.querySelector("audio");
-        
+
         if (audio.paused) {
             audio.play();
             button.textContent = "⏸";
