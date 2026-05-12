@@ -171,3 +171,33 @@ main {
     text-align: center;
     font-family: groteskSpace;
 }
+
+.headphoneImg {
+    height: 50px;
+    width: 50px;
+}
+
+.playChapter {
+    height: 60px;
+    width: 60px;
+
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.playButtonContainer p{
+    margin: 0;
+    text-align: center;
+}
+
+.playButtonContainer {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
