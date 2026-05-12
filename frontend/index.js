@@ -420,3 +420,18 @@ document.querySelectorAll(".playChapter").forEach(button => {
         }
     })
 })
+
+const yesButton = document.querySelector("#yesButton");
+const noButton = document.querySelector("#noButton");
+const yesAnswer = document.querySelector("#yesAnswer");
+const noAnswer = document.querySelector("#noAnswer");
+
+yesButton.addEventListener("click", () => {
+    chapter11Page.classList.add("hide");
+    yesAnswer.classList.remove("hide");
+})
+
+noButton.addEventListener("click", () => {
+    chapter11Page.classList.add("hide");
+    noAnswer.classList.remove("hide");
+})
