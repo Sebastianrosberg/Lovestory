@@ -435,3 +435,11 @@ noButton.addEventListener("click", () => {
     chapter11Page.classList.add("hide");
     noAnswer.classList.remove("hide");
 })
+
+document.querySelectorAll(".backToStart").forEach(button => {
+    button.addEventListener("click", () => {
+        yesAnswer.classList.add("hide");
+        noAnswer.classList.add("hide");
+        introPage.classList.remove("hide");
+    })
+})
