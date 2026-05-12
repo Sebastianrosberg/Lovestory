@@ -408,15 +408,15 @@ document.addEventListener("click", (event) => {
 // Startar röstljudet för kapitlarna
 
 document.querySelectorAll(".playChapter").forEach(button => {
-    button.addEventListener("click", () => {
-        const audio = button.parentElement.querySelector("audio");
+    button.addEventListener("click", (event) => {
+        const buttonEl = event.currentTarget;
+
+        const audio = buttonEl.closest(".audioContainer").querySelector("audio");
 
         if (audio.paused) {
             audio.play();
-            button.textContent = "⏸";
         } else {
             audio.pause();
-            button.textContent = "▶";
         }
     })
 })
