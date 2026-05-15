@@ -183,19 +183,19 @@ startPageSmsConversation.addEventListener("click", () => {
 
 //geoLocation
 
-let RADIUS = 50;
+let RADIUS = 100;
 let TargetLocations = {
-    chap1: { latitude: 55.60085606861859, longitude: 12.989079444867883 },
-    chap2: { latitude: 55.610813241992915, longitude: 12.982176299783507 },
-    chap3: { latitude: 55.61964569300686, longitude: 12.978360885921994 },
-    chap4: { latitude: 55.60883601160361, longitude: 12.994571284715402 },
-    chap5: { latitude: 55.607770643254035, longitude: 12.99358194776491 },
-    chap6: { latitude: 55.603889968250826, longitude: 12.989189268726877 },
-    chap7: { latitude: 55.61178808302698, longitude: 12.997833611055748 },
-    chap8: { latitude: 55.60803874759567, longitude: 12.991047352501079 },
-    chap9: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
-    chap10: { latitude: 55.59728614848932, longitude: 12.990082184069786 },
-    chap11: { latitude: 55.59728614848932, longitude: 12.990082184069786 }
+    chap1: { latitude: 55.60894763773588, longitude: 12.994335860211391 },
+    chap2: { latitude: 55.61093257525446, longitude: 12.982162278152366 },
+    chap3: { latitude: 55.61272449542715, longitude: 12.995866107120628 },
+    chap4: { latitude: 55.610805511356226, longitude: 12.994946879349987 },
+    chap5: { latitude: 55.607722870654634, longitude: 12.993585994872022 },
+    chap6: { latitude: 55.603818818661935, longitude: 12.98919555681913 },
+    chap7: { latitude: 55.60694545975628, longitude: 12.992263697683203 },
+    chap8: { latitude: 55.60801646928984, longitude: 12.991059809539934 },
+    chap9: { latitude: 55.60978491240894, longitude: 12.993780111176735 },
+    chap10: { latitude: 55.60978491240894, longitude: 12.993780111176735 },
+    chap11: { latitude: 55.60978491240894, longitude: 12.993780111176735 }
 }
 
 navigator.geolocation.watchPosition((position) => {
@@ -385,19 +385,21 @@ continueButton.addEventListener("click", () => {
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains("chapterButton")) {
         const chapterName = event.target.dataset.chapter;
-        console.log(visitedTargets[chapterName].visited);
-        console.log(visitedTargets[chapterName].open);
+      /*   console.log(visitedTargets[chapterName].visited);
+        console.log(visitedTargets[chapterName].open); */
         if (visitedTargets[chapterName].visited == true && visitedTargets[chapterName].open == true) {
-            let unlockedPlace = visitedTargets[chapterName].unlocks
-            console.log(visitedTargets, visitedTargets[chapterName].open)
+            if(!visitedTarget[chapterName] == "chap11" ) {
+                let unlockedPlace = visitedTargets[chapterName].unlocks
+                /* console.log(visitedTargets, visitedTargets[chapterName].open) */
 
-            visitedTargets[unlockedPlace].open = true
+                visitedTargets[unlockedPlace].open = true
 
-            const pageIndex = Number(event.target.dataset.page);
-            const date = event.target.dataset.date;
+                const pageIndex = Number(event.target.dataset.page);
+                const date = event.target.dataset.date;
 
-            showDateTransition(date, pageIndex);
-            menuPage.classList.add("hide");
+                showDateTransition(date, pageIndex);
+                menuPage.classList.add("hide");
+            }
 
         }
     }
