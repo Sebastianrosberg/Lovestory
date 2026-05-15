@@ -16,6 +16,9 @@ let chapter10Page = document.querySelector("#chapter10");
 let chapter11Page = document.querySelector("#chapter11");
 let smsSignal = document.querySelector("#smsSignal")
 
+let chap5Input = document.querySelector("#chap5Input")
+let chap5inputBtn = document.querySelector("#chap5InputSubmit")
+
 let newGame = document.querySelector("#newGame")
 let continueGame = document.querySelector("#continueGame")
 let popupNo = document.querySelector("#popupNo")
@@ -442,4 +445,15 @@ document.querySelectorAll(".backToStart").forEach(button => {
         noAnswer.classList.add("hide");
         introPage.classList.remove("hide");
     })
+})
+
+// chap 5 clue input
+
+chap5inputBtn.addEventListener("click", () => {
+    if(chap5Input.value.toLowerCase() != "slottsträdgårdens kafé") {
+        chap5Input.style.border = "1px solid red"
+        chap5Input.value = "";
+    } else {
+        chap5Input.style.border = "1px solid green"
+    }
 })
