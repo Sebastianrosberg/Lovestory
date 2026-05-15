@@ -1,8 +1,9 @@
 
 
-let introPage = document.querySelector("#intro")
+let introPage = document.querySelector("#intro");
+let contextPage = document.querySelector("#contextPage");
 let startPage = document.querySelector("#startPage");
-let messagePage = document.querySelector("#messagePage")
+let messagePage = document.querySelector("#messagePage");
 let chapter1Page = document.querySelector("#chapter1");
 let chapter2Page = document.querySelector("#chapter2");
 let chapter3Page = document.querySelector("#chapter3");
@@ -21,8 +22,9 @@ let continueGame = document.querySelector("#continueGame")
 let popupNo = document.querySelector("#popupNo")
 let popupYes = document.querySelector("#popupYes")
 let popupStartGame = document.querySelector("#popupStartGame")
+let toStartPage = document.querySelector("#toStartPage");
 
-let allPages = [introPage, startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page, chapter11Page];
+let allPages = [introPage, contextPage, startPage, messagePage, chapter1Page, chapter2Page, chapter3Page, chapter4Page, chapter5Page, chapter6Page, chapter7Page, chapter8Page, chapter9Page, chapter10Page, chapter11Page];
 
 let humanButton = document.querySelector("#humanButton");
 let circle1 = document.querySelector("#circle1");
@@ -78,8 +80,8 @@ popupYes.addEventListener("click", () => {
     introPage.classList.remove("reveal")
     introPage.classList.add("hide")
 
-    startPage.classList.add("reveal")
-    startPage.classList.remove("hide")
+    contextPage.classList.add("reveal")
+    contextPage.classList.remove("hide")
 
 
     visitedTargets = {
@@ -114,6 +116,13 @@ continueGame.addEventListener("click", () => {
 
 })
 
+toStartPage.addEventListener("click", () => {
+    contextPage.classList.add("hide");
+    contextPage.classList.remove("reveal");
+
+    startPage.classList.remove("hide");
+    startPage.classList.add("reveal");
+})
 
 
 // Start Page Listeneres
