@@ -22,6 +22,10 @@
     background-color: white;
 }
 
+.letterTitle {
+    text-align: center;
+}
+
 #letterTitleAndText {
     display: flex;
     align-items: center;
@@ -39,4 +43,13 @@ span {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#inputQuestion {
+    font-weight: bold;
+}
+
+#inputsDiv input {
+    width: 20px;
+    height: 20px;
 }
